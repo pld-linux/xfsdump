@@ -2,20 +2,20 @@ Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	2.2.13
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Archiving
-Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src.tar.gz
-# Source0-md5:	0e6b24628c695fa5b0c86a9c65f953c3
+Source0:	ftp://oss.sgi.com/projects/xfs/download/Release-1.3/cmd_tars/%{name}-%{version}.src.tar.gz
+# Source0-md5:	25298e26ba3384b88fa21be291ea65a3
 Patch0:		%{name}-miscfix.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dmapi-devel >= 2.0.5-1
+BuildRequires:	dmapi-devel >= 2.0.8-2
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	ncurses-devel
-BuildRequires:	xfsprogs-devel >= 2.1.2-2
+BuildRequires:	xfsprogs-devel >= 2.5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
