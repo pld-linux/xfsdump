@@ -42,7 +42,7 @@ ta¶mê lub inne medium danych. Program u¿ywa specyficznych dla XFS
 funkcji optymalizuj±cych kopiê zapasow± (równie¿ znane jako
 rozszerzone atrybuty kopii zapasowych XFS). Stworzone kopie zapasowe
 s± "endian safe" i przez to mog± byæ przenoszone pomiêdzy maszynami
-Linuxowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
+Linuksowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
 
 xfsrestore wykonuje operacjê przeciwn± do xfsdump; mo¿e on odzyskaæ
 system plików z kopii zapasowej. Inkrementalne kopie zapasowe mog± byæ
