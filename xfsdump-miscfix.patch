@@ -5,32 +5,14 @@ diff -urN xfsdump-1.0.5.org/configure.in xfsdump-1.0.5/configure.in
  AC_SUBST(malloc_lib)
  
  dnl Set version
--. VERSION
+-. ./VERSION
 +PKG_MAJOR=1
-+PKG_MINOR=0
-+PKG_REVISION=5
++PKG_MINOR=1
++PKG_REVISION=3
 +PKG_BUILD=0
  
  pkg_version=${PKG_MAJOR}.${PKG_MINOR}.${PKG_REVISION}
  pkg_release=$PKG_BUILD
-@@ -114,7 +117,7 @@
- 	echo 'Install either the e2fsprogs-devel (rpm) or the uuid-dev (deb) package.'
- 	exit 1
- ])
--libuuid="/usr/lib/libuuid.a"
-+libuuid="-luuid"
- AC_SUBST(libuuid)
- 
- dnl Checks for base XFS headers and libraries.
-@@ -160,7 +163,7 @@
- 	echo 'Install either the attr-devel (rpm) or the attr-dev (deb) package.'
- 	exit 1
- ])
--libattr="/usr/lib/libattr.a"
-+libattr="-lattr"
- AC_SUBST(libattr)
- 
- 
 @@ -173,14 +176,6 @@
  dnl (usually on Debian, but not Redhat pre-7.0)
  pkg_man_dir=${prefix}/share/man
