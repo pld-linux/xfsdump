@@ -1,18 +1,20 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.2.6
+Version:	2.2.13
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
-URL:		http://oss.sgi.com/projects/xfs/
 Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src.tar.gz
-# Source0-md5:	e6282e66993c692d444cc21b5f8bb3eb
+# Source0-md5:	0e6b24628c695fa5b0c86a9c65f953c3
+Patch0:		%{name}-miscfix.patch
+URL:		http://oss.sgi.com/projects/xfs/
+BuildRequires:	attr-devel
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	dmapi-devel >= 2.0.5-1
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	xfsprogs-devel >= 2.1.2-2
-BuildRequires:	attr-devel
-BuildRequires:	dmapi-devel >= 2.0.5-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
@@ -45,24 +47,27 @@ ta¶mê lub inne medium danych. Program u¿ywa specyficznych dla XFS
 funkcji optymalizuj±cych kopiê zapasow± (równie¿ znane jako
 rozszerzone atrybuty kopii zapasowych XFS). Stworzone kopie zapasowe
 s± "endian safe" i przez to mog± byæ przenoszone pomiêdzy maszynami
-Linuksowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
+linuksowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
 
 xfsrestore wykonuje operacjê przeciwn± do xfsdump; mo¿e on odzyskaæ
-system plików z kopii zapasowej. Inkrementalne kopie zapasowe mog± byæ
+system plików z kopii zapasowej. Przyrostowe kopie zapasowe mog± byæ
 u¿ywane w³±cznie z pe³n± kopi±.
 
 %prep
-%setup  -q
+%setup -q
+%patch -p1
 
 %build
-DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}"; export DEBUG
+rm -f aclocal.m4
+%{__aclocal} -I m4
 %{__autoconf}
 CPPFLAGS="-I/usr/include/ncurses"
-%configure
+%configure \
+	DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}" \
+	OPTIMIZER="%{rpmcflags} -I/usr/include/ncurses"
 
 %{__make} \
-	LIBUUID="-luuid" \
-	OPTIMIZER="%{rpmcflags} -I/usr/include/ncurses"
+	LIBUUID="-luuid"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -71,8 +76,11 @@ DIST_ROOT="$RPM_BUILD_ROOT"
 DIST_INSTALL=`pwd`/install.manifest
 DIST_INSTALL_DEV=`pwd`/install-dev.manifest
 export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
-%{__make} install DIST_MANIFEST="$DIST_INSTALL"
-%{__make} install-dev DIST_MANIFEST="$DIST_INSTALL_DEV"
+
+%{__make} install \
+	DIST_MANIFEST="$DIST_INSTALL"
+%{__make} install-dev \
+	DIST_MANIFEST="$DIST_INSTALL_DEV"
 
 rm -f $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8*
 echo ".so man8/xfsdq.8" > $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
