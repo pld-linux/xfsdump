@@ -11,7 +11,7 @@ Patch0:		%{name}-miscfix.patch
 Patch1:		xfsdump-getdents64.patch
 BuildRequires:	autoconf
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	xfsprogs-devel >= 2.1.0
+BuildRequires:	xfsprogs-devel >= 2.1.2-2
 BuildRequires:	attr-devel
 BuildRequires:	dmapi-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,10 +60,12 @@ u¿ywane w³±cznie z pe³n± kopi±.
 %build
 DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}"; export DEBUG
 %{__autoconf}
-CFLAGS="%{rpmcflags} -I/usr/include/ncurses" ; export CFLAGS
+CPPFLAGS="-I/usr/include/ncurses"
 %configure
 
-%{__make}
+%{__make} \
+	LIBUUID="-luuid" \
+	OPTIMIZER="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
