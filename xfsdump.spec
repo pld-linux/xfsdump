@@ -1,13 +1,14 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.0.1
+Version:	2.0.3
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 URL:		http://oss.sgi.com/projects/xfs/
 Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src.tar.gz
 Patch0:		%{name}-miscfix.patch
+Patch1:		xfsdump-getdents64.patch
 BuildRequires:	autoconf
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	xfsprogs-devel >= 1.2.7
@@ -51,6 +52,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 %prep
 %setup  -q
 %patch0 -p1
+%patch1 -p0
 
 %build
 DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}"; export DEBUG
@@ -72,14 +74,12 @@ export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
 rm -f $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
 echo ".so man8/xfsdq.8" > $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
 
-gzip -9nf doc/{CHANGES,README.*}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/*.gz
+%doc doc/{CHANGES,README.*}
 %attr(755,root,root) %{_sbindir}/*
 %attr(755,root,root) /sbin/*
 %{_mandir}/man8/*
