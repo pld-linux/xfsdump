@@ -1,7 +1,7 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	1.0.5
+Version:	1.0.9
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
@@ -10,7 +10,7 @@ Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://linux-xfs.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src.tar.gz
 Patch0:		%{name}-miscfix.patch
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	xfsprogs-devel
+BuildRequires:	xfsprogs-devel >= 1.2.7
 BuildRequires:	attr-devel
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
