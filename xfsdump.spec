@@ -13,7 +13,7 @@ BuildRequires:	attr-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dmapi-devel >= 2.0.8-2
-BuildRequires:	e2fsprogs-devel
+BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	xfsprogs-devel >= 2.5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
