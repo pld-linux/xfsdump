@@ -2,7 +2,7 @@ Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	1.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Archiving
 URL:		http://oss.sgi.com/projects/xfs/
@@ -81,4 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/*.gz
 %attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) /sbin/*
 %{_mandir}/man8/*
