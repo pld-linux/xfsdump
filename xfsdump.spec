@@ -1,7 +1,7 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.1.3
+Version:	2.1.5
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
