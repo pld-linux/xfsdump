@@ -1,7 +1,7 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl):	Narzêdzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.0.3
+Version:	2.1.3
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
@@ -11,10 +11,13 @@ Patch0:		%{name}-miscfix.patch
 Patch1:		xfsdump-getdents64.patch
 BuildRequires:	autoconf
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	xfsprogs-devel >= 1.2.7
+BuildRequires:	xfsprogs-devel >= 2.1.0
 BuildRequires:	attr-devel
 BuildRequires:	dmapi-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_sbindir	/sbin
+%define		_bindir		/usr/sbin
 
 %description
 The xfsdump package contains xfsdump, xfsrestore and a number of other
@@ -57,6 +60,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 %build
 DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}"; export DEBUG
 %{__autoconf}
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses" ; export CFLAGS
 %configure
 
 %{__make}
@@ -80,6 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/{CHANGES,README.*}
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
-%attr(755,root,root) /sbin/*
 %{_mandir}/man8/*
