@@ -9,10 +9,11 @@ Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://linux-xfs.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src.tar.gz
 Patch0:		%{name}-miscfix.patch
+URL:		http://oss.sgi.com/projects/xfs/
+BuildRequires:	autoconf
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	xfsprogs-devel >= 1.2.7
 BuildRequires:	attr-devel
-URL:		http://oss.sgi.com/projects/xfs/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +47,7 @@ Linuxowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
 
 xfsrestore wykonuje operacjê przeciwn± do xfsdump; mo¿e on odzyskaæ
 system plików z kopii zapasowej. Inkrementalne kopie zapasowe mog± byæ
-u¿ywane w³±cznie z pe³ny± kopi±.
+u¿ywane w³±cznie z pe³n± kopi±.
 
 %prep
 %setup  -q
@@ -73,6 +74,7 @@ rm -f $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
 echo ".so man8/xfsdq.8" > $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
 
 gzip -9nf doc/{CHANGES,README.*}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
