@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dmapi-devel >= 2.0.5-1
 BuildRequires:	e2fsprogs-devel
+BuildRequires:	ncurses-devel
 BuildRequires:	xfsprogs-devel >= 2.1.2-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
