@@ -54,7 +54,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 
 %build
 DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}"; export DEBUG
-autoconf
+%{__autoconf}
 %configure
 
 %{__make}
