@@ -13,7 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	xfsprogs-devel >= 2.1.2-2
 BuildRequires:	attr-devel
-BuildRequires:	dmapi-devel
+BuildRequires:	dmapi-devel >= 2.0.5-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
