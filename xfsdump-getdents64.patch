@@ -1,0 +1,11 @@
+--- common/getdents.c~	Wed May  8 17:15:36 2002
++++ common/getdents.c	Tue Jul 16 22:11:21 2002
+@@ -49,6 +49,8 @@
+ 
+ #include <linux/posix_types.h>
+ 
++#define SYS_getdents64 __NR_getdents64
++
+ /* Copied from kernel-features.h for __ASSUME_GETDENTS64_SYSCALL */
+ #ifndef __LINUX_KERNEL_VERSION
+ /* We assume the worst; all kernels should be supported.  */
