@@ -56,7 +56,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 rm -f aclocal.m4
