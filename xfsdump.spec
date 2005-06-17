@@ -9,6 +9,7 @@ Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}-%{version}.src
 # Source0-md5:	62480f8575cad381eed542237c7f0ba3
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-xfsrq.patch
+Patch2:		%{name}-gcc4.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf
@@ -59,6 +60,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f aclocal.m4
