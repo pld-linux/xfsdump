@@ -1,0 +1,11 @@
+--- xfsdump-2.2.25/fsr/xfs_fsr.c~	2004-10-13 00:26:00.000000000 +0000
++++ xfsdump-2.2.25/fsr/xfs_fsr.c	2005-06-17 20:25:49.742824936 +0000
+@@ -106,7 +106,7 @@
+ static time_t howlong = 7200;		/* default seconds of reorganizing */
+ static char *leftofffile = "/var/tmp/.fsrlast_xfs";/* where we left off last */
+ static char *mtab = MOUNTED;
+-static char *progname;
++char *progname;
+ static time_t endtime;
+ static time_t starttime;
+ static xfs_ino_t	leftoffino = 0;
