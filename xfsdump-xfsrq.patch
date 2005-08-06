@@ -1,10 +1,10 @@
---- ./quota/xfsrq.sh.org	2005-06-09 12:23:13.816068808 +0200
-+++ ./quota/xfsrq.sh	2005-06-09 12:24:07.120965232 +0200
+--- xfsdump-2.2.30.orig/quota/xfsrq.sh	2005-08-01 16:20:45.000000000 +0200
++++ xfsdump-2.2.30/quota/xfsrq.sh	2005-08-06 18:49:11.000000000 +0200
 @@ -66,7 +66,8 @@
  			# blk conversion (512 -> 1024)
  			bsoft=`expr $bsoft / 2`
  			bhard=`expr $bhard / 2`
--			setquota $OPTS -n $id $fs $bsoft $bhard $isoft $ihard
+-			setquota $OPTS $id $bsoft $bhard $isoft $ihard $fs
 +			user=`grep "^[^:]*:[^:]*:${id}:" /etc/passwd |cut -f 1 -d : | head -1`
 +			setquota $OPTS ${user} $bsoft $bhard $isoft $ihard ${fs}
  		done
