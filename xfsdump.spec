@@ -64,10 +64,10 @@ u¿ywane w³±cznie z pe³n± kopi±.
 rm -f aclocal.m4
 %{__aclocal} -I m4
 %{__autoconf}
-CPPFLAGS="-I%{_includedir}/ncurses"
+CPPFLAGS="-I/usr/include/ncurses"
 %configure \
 	DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}" \
-	OPTIMIZER="%{rpmcflags} -I%{_includedir}/ncurses"
+	OPTIMIZER="%{rpmcflags} -I/usr/include/ncurses"
 
 %{__make} \
 	LIBUUID="-luuid"
