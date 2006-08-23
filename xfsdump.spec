@@ -8,6 +8,7 @@ Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}_%{version}-1.tar.gz
 # Source0-md5:	4e113a39b07723bbb140d2e5c5389cfe
 Patch0:		%{name}-miscfix.patch
+Patch1:		%{name}-libtool.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf
@@ -56,6 +57,7 @@ u¿ywane w³±cznie z pe³n± kopi±.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f aclocal.m4
