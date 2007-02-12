@@ -1,5 +1,5 @@
 Summary:	Tools for the XFS filesystem
-Summary(pl.UTF-8):   Narzędzia do systemu plikowego XFS
+Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	2.2.42
 Release:	1
