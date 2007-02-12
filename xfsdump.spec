@@ -1,5 +1,5 @@
 Summary:	Tools for the XFS filesystem
-Summary(pl):	Narzêdzia do systemu plikowego XFS
+Summary(pl.UTF-8):   NarzÄ™dzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	2.2.42
 Release:	1
@@ -38,21 +38,21 @@ full backup of a filesystem. Subsequent incremental backups can then
 be layered on top of the full backup. Single files and directory
 subtrees may be restored from full or partial backups.
 
-%description -l pl
-Pakiet zawiera programy xfsdump, xfsrestore i inne narzêdzia do
-administracji systemami plików XFS.
+%description -l pl.UTF-8
+Pakiet zawiera programy xfsdump, xfsrestore i inne narzÄ™dzia do
+administracji systemami plikÃ³w XFS.
 
-xfsdump kontroluje system plików oraz wykrywa, które czê¶ci wymagaj±
-wykonania kopii zapasowej, a nastêpnie kopiuje te dane na podany dysk,
-ta¶mê lub inne medium danych. Program u¿ywa specyficznych dla XFS
-funkcji optymalizuj±cych kopiê zapasow± (równie¿ znane jako
+xfsdump kontroluje system plikÃ³w oraz wykrywa, ktÃ³re czÄ™Å›ci wymagajÄ…
+wykonania kopii zapasowej, a nastÄ™pnie kopiuje te dane na podany dysk,
+taÅ›mÄ™ lub inne medium danych. Program uÅ¼ywa specyficznych dla XFS
+funkcji optymalizujÄ…cych kopiÄ™ zapasowÄ… (rÃ³wnieÅ¼ znane jako
 rozszerzone atrybuty kopii zapasowych XFS). Stworzone kopie zapasowe
-s± "endian safe" i przez to mog± byæ przenoszone pomiêdzy maszynami
-linuksowymi oraz IRIX pracuj±cymi na ró¿nych architekturach.
+sÄ… "endian safe" i przez to mogÄ… byÄ‡ przenoszone pomiÄ™dzy maszynami
+linuksowymi oraz IRIX pracujÄ…cymi na rÃ³Å¼nych architekturach.
 
-xfsrestore wykonuje operacjê przeciwn± do xfsdump; mo¿e on odzyskaæ
-system plików z kopii zapasowej. Przyrostowe kopie zapasowe mog± byæ
-u¿ywane w³±cznie z pe³n± kopi±.
+xfsrestore wykonuje operacjÄ™ przeciwnÄ… do xfsdump; moÅ¼e on odzyskaÄ‡
+system plikÃ³w z kopii zapasowej. Przyrostowe kopie zapasowe mogÄ… byÄ‡
+uÅ¼ywane wÅ‚Ä…cznie z peÅ‚nÄ… kopiÄ….
 
 %prep
 %setup -q
