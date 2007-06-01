@@ -1,12 +1,12 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.2.42
+Version:	2.2.45
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}_%{version}-1.tar.gz
-# Source0-md5:	4e113a39b07723bbb140d2e5c5389cfe
+# Source0-md5:	9f4f6da94d14e638639a542b0fa8a722
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-libtool.patch
 URL:		http://oss.sgi.com/projects/xfs/
@@ -59,8 +59,9 @@ używane włącznie z pełną kopią.
 %patch0 -p1
 %patch1 -p1
 
-%build
 rm -f aclocal.m4
+
+%build
 %{__aclocal} -I m4
 %{__autoconf}
 CPPFLAGS="-I/usr/include/ncurses"
