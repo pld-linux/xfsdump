@@ -88,6 +88,8 @@ export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
 rm -f $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8*
 echo ".so man8/xfsdq.8" > $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
 
+rm -rf $RPM_BUILD_ROOT%{_docdir}/xfsdump
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
