@@ -1,12 +1,12 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.2.46
+Version:	2.2.48
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}_%{version}-1.tar.gz
-# Source0-md5:	c233a3f032d183d5bfa5dce210a08418
+# Source0-md5:	46412a9dabb8c9f84cd1d9ff1cda64a6
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-libtool.patch
 URL:		http://oss.sgi.com/projects/xfs/
@@ -85,9 +85,6 @@ export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
 %{__make} install-dev \
 	DIST_MANIFEST="$DIST_INSTALL_DEV"
 
-rm -f $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8*
-echo ".so man8/xfsdq.8" > $RPM_BUILD_ROOT%{_mandir}/man8/xfsrq.8
-
 rm -rf $RPM_BUILD_ROOT%{_docdir}/xfsdump
 
 %clean
@@ -96,6 +93,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/{CHANGES,README.*}
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_sbindir}/*
-%{_mandir}/man8/*
+%attr(755,root,root) %{_sbindir}/xfsdump
+%attr(755,root,root) %{_sbindir}/xfsrestore
+%attr(755,root,root) %{_bindir}/xfs_estimate
+%attr(755,root,root) %{_bindir}/xfs_fsr
+%attr(755,root,root) %{_bindir}/xfsdump
+%attr(755,root,root) %{_bindir}/xfsinvutil
+%attr(755,root,root) %{_bindir}/xfsrestore
+%{_mandir}/man8/xfs_estimate.8*
+%{_mandir}/man8/xfs_fsr.8*
+%{_mandir}/man8/xfsdump.8*
+%{_mandir}/man8/xfsinvutil.8*
+%{_mandir}/man8/xfsrestore.8*
