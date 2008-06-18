@@ -5,7 +5,7 @@ Version:	2.2.48
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
-Source0:	ftp://oss.sgi.com/projects/xfs/download/cmd_tars/%{name}_%{version}-1.tar.gz
+Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}_%{version}-1.tar.gz
 # Source0-md5:	46412a9dabb8c9f84cd1d9ff1cda64a6
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-libtool.patch
