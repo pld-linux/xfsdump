@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	2.2.48
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}_%{version}-1.tar.gz
 # Source0-md5:	46412a9dabb8c9f84cd1d9ff1cda64a6
