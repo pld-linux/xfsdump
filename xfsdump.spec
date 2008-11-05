@@ -16,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	xfsprogs-devel >= 2.6.9
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
