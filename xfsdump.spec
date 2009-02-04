@@ -1,14 +1,13 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	2.2.48
+Version:	3.0.0
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
-Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}_%{version}-1.tar.gz
-# Source0-md5:	46412a9dabb8c9f84cd1d9ff1cda64a6
+Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
+# Source0-md5:	63f05d3d131cedae2a1cdf78b47e448d
 Patch0:		%{name}-miscfix.patch
-Patch1:		%{name}-libtool.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf
@@ -58,7 +57,6 @@ używane włącznie z pełną kopią.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 rm -f aclocal.m4
 
@@ -96,13 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/{CHANGES,README.*}
 %attr(755,root,root) %{_sbindir}/xfsdump
 %attr(755,root,root) %{_sbindir}/xfsrestore
-%attr(755,root,root) %{_bindir}/xfs_estimate
-%attr(755,root,root) %{_bindir}/xfs_fsr
 %attr(755,root,root) %{_bindir}/xfsdump
 %attr(755,root,root) %{_bindir}/xfsinvutil
 %attr(755,root,root) %{_bindir}/xfsrestore
-%{_mandir}/man8/xfs_estimate.8*
-%{_mandir}/man8/xfs_fsr.8*
 %{_mandir}/man8/xfsdump.8*
 %{_mandir}/man8/xfsinvutil.8*
 %{_mandir}/man8/xfsrestore.8*
