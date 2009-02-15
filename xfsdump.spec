@@ -2,7 +2,7 @@ Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	3.0.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
