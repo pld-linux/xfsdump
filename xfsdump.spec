@@ -12,10 +12,10 @@ URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	xfsprogs-devel >= 2.6.9
-BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
