@@ -2,7 +2,7 @@ Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
 Version:	3.0.4
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
@@ -66,7 +66,7 @@ rm -f aclocal.m4
 CPPFLAGS="-I/usr/include/ncurses"
 %configure \
 	DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}" \
-	OPTIMIZER="%{rpmcflags} -I/usr/include/ncurses"
+	OPTIMIZER="%{rpmcflags} %{rpmcppflags} -I/usr/include/ncurses"
 
 %{__make} \
 	LIBUUID="-luuid"

@@ -13,3 +13,23 @@
 -    done
      AC_SUBST(have_zipped_manpages)
    ])
+--- xfsdump-3.0.4/dump/Makefile~	2010-01-13 02:53:18.000000000 +0100
++++ xfsdump-3.0.4/dump/Makefile	2010-12-08 21:41:53.673333296 +0100
+@@ -102,7 +102,6 @@
+ 	$(INSTALL) -m 755 -d $(PKG_ROOT_SBIN_DIR)
+ 	$(LTINSTALL) -m 755 $(LTCOMMAND) $(PKG_ROOT_SBIN_DIR)
+ 	$(INSTALL) -m 755 -d $(PKG_SBIN_DIR)
+-	$(INSTALL) -S $(PKG_ROOT_SBIN_DIR)/$(LTCOMMAND) $(PKG_SBIN_DIR)/$(LTCOMMAND)
+ install-dev:
+ 
+ $(COMMINCL) $(COMMON):
+--- xfsdump-3.0.4/restore/Makefile~	2010-01-13 02:53:18.000000000 +0100
++++ xfsdump-3.0.4/restore/Makefile	2010-12-08 21:42:02.034493751 +0100
+@@ -114,7 +114,6 @@
+ 	$(INSTALL) -m 755 -d $(PKG_ROOT_SBIN_DIR)
+ 	$(LTINSTALL) -m 755 $(LTCOMMAND) $(PKG_ROOT_SBIN_DIR)
+ 	$(INSTALL) -m 755 -d $(PKG_SBIN_DIR)
+-	$(INSTALL) -S $(PKG_ROOT_SBIN_DIR)/$(LTCOMMAND) $(PKG_SBIN_DIR)/$(LTCOMMAND)
+ install-dev:
+ 
+ $(COMMINCL) $(COMMON):
