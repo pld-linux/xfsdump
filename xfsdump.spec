@@ -58,7 +58,7 @@ używane włącznie z pełną kopią.
 %setup -q
 %patch0 -p1
 
-rm -f aclocal.m4
+%{__rm} aclocal.m4
 
 %build
 %{__aclocal} -I m4
@@ -84,7 +84,7 @@ export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
 %{__make} install-dev \
 	DIST_MANIFEST="$DIST_INSTALL_DEV"
 
-rm -rf $RPM_BUILD_ROOT%{_docdir}/xfsdump
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/xfsdump
 
 %clean
 rm -rf $RPM_BUILD_ROOT
