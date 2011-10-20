@@ -1,16 +1,16 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	3.0.5
+Version:	3.0.6
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
-# Source0-md5:	878795f3cf8bcd10eaa3da9e0a612fa7
+# Source0-md5:	b307d91d477e2c3eb853fe1e828ad427
 Patch0:		%{name}-miscfix.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libuuid-devel
@@ -69,7 +69,8 @@ CPPFLAGS="-I/usr/include/ncurses"
 	OPTIMIZER="%{rpmcflags} %{rpmcppflags} -I/usr/include/ncurses"
 
 %{__make} \
-	LIBUUID="-luuid"
+	LIBUUID="-luuid" \
+	V=1
 
 %install
 rm -rf $RPM_BUILD_ROOT
