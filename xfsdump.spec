@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
 # Source0-md5:	abe035537d0f325c4f2dbacc0d2b6fd6
+Source1:	%{name}.pl.po
 Patch0:		%{name}-miscfix.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
@@ -15,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	sed >= 4.0
 BuildRequires:	xfsprogs-devel >= 2.6.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,6 +60,9 @@ używane włącznie z pełną kopią.
 %setup -q
 %patch0 -p1
 
+cp %{SOURCE1} po/pl.po
+%{__sed} -i -e '/^LINGUAS/s/$/ pl/' po/Makefile
+
 %{__rm} aclocal.m4
 
 %build
@@ -87,10 +92,12 @@ export DIST_ROOT DIST_INSTALL DIST_INSTALL_DEV
 
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}/xfsdump
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc doc/{CHANGES,README.*}
 %attr(755,root,root) %{_sbindir}/xfsdump
