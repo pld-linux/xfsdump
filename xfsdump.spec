@@ -1,13 +1,14 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	3.1.2
+Version:	3.1.3
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://oss.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
-# Source0-md5:	b9904578f00da99922035e0dc04ace2f
+# Source0-md5:	aad7160b88db24c0510c001debd689be
 Patch0:		%{name}-miscfix.patch
+Patch1:		%{name}-pl.po-update.patch
 URL:		http://oss.sgi.com/projects/xfs/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf >= 2.50
@@ -57,6 +58,7 @@ używane włącznie z pełną kopią.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %{__rm} aclocal.m4
 
