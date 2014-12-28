@@ -12,7 +12,7 @@ URL:		http://www.xfs.org/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	xfsprogs-devel >= 2.6.9
