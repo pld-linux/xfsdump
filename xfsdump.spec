@@ -1,12 +1,12 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	3.1.4
+Version:	3.1.6
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	ftp://linux-xfs.sgi.com/projects/xfs/cmd_tars/%{name}-%{version}.tar.gz
-# Source0-md5:	a8b1761be5feb363131e7b506639ad4c
+# Source0-md5:	50353cd4f4b435685955363e6044f4d1
 Patch0:		%{name}-miscfix.patch
 URL:		http://www.xfs.org/
 BuildRequires:	attr-devel >= 2.4.15
@@ -61,8 +61,10 @@ używane włącznie z pełną kopią.
 %{__rm} aclocal.m4
 
 %build
+%{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
+%{__cp} include/install-sh .
 CPPFLAGS="-I/usr/include/ncurses"
 %configure \
 	DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}" \
