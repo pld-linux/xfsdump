@@ -5,9 +5,11 @@ Version:	3.1.8
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
+# TODO: use .tar.xz source
 Source0:	https://kernel.org/pub/linux/utils/fs/xfs/xfsdump/%{name}-%{version}.tar.gz
 # Source0-md5:	6963b1e4b96acfa249449db44d1df4fa
 Patch0:		%{name}-miscfix.patch
+Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.xfs.org/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf >= 2.50
@@ -57,6 +59,7 @@ używane włącznie z pełną kopią.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %{__rm} aclocal.m4
 
