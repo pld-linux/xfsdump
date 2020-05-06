@@ -1,13 +1,12 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	3.1.8
+Version:	3.1.9
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
-# TODO: use .tar.xz source
-Source0:	https://kernel.org/pub/linux/utils/fs/xfs/xfsdump/%{name}-%{version}.tar.gz
-# Source0-md5:	6963b1e4b96acfa249449db44d1df4fa
+Source0:	https://www.kernel.org/pub/linux/utils/fs/xfs/xfsdump/%{name}-%{version}.tar.xz
+# Source0-md5:	086f7582875b14c17522867ffe3e202b
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.xfs.org/
@@ -17,7 +16,9 @@ BuildRequires:	automake
 BuildRequires:	gettext-tools
 BuildRequires:	libuuid-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xfsprogs-devel >= 2.6.9
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
@@ -68,13 +69,12 @@ używane włącznie z pełną kopią.
 %{__aclocal} -I m4
 %{__autoconf}
 %{__cp} include/install-sh .
-CPPFLAGS="-I/usr/include/ncurses"
+CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses"
 %configure \
 	DEBUG="%{?debug:-DDEBUG}%{!?debug:-DNDEBUG}" \
 	OPTIMIZER="%{rpmcflags} %{rpmcppflags} -I/usr/include/ncurses"
 
 %{__make} \
-	LIBUUID="-luuid" \
 	V=1
 
 %install
@@ -99,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc doc/{CHANGES,README.*}
+%doc doc/{CHANGES,README.xfsdump}
 %attr(755,root,root) %{_sbindir}/xfsdump
 %attr(755,root,root) %{_sbindir}/xfsrestore
 %attr(755,root,root) %{_sbindir}/xfsinvutil
