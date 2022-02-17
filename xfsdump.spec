@@ -9,7 +9,7 @@ Source0:	https://www.kernel.org/pub/linux/utils/fs/xfs/xfsdump/%{name}-%{version
 # Source0-md5:	c39dc51bf4a43ab5e86b8e6728af3380
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-pl.po-update.patch
-URL:		http://www.xfs.org/
+URL:		https://xfs.wiki.kernel.org/
 BuildRequires:	attr-devel >= 2.4.15
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake

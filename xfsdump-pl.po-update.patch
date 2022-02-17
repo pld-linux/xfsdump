@@ -1,20 +1,20 @@
---- xfsdump-3.1.8/po/pl.po.orig	2015-10-15 06:16:43.000000000 +0200
-+++ xfsdump-3.1.8/po/pl.po	2018-08-26 10:33:49.403874714 +0200
+--- xfsdump-3.1.10/po/pl.po.orig	2022-02-11 19:30:55.000000000 +0100
++++ xfsdump-3.1.10/po/pl.po	2022-02-17 19:25:20.832405978 +0100
 @@ -1,13 +1,13 @@
  # Polish translation for xfsdump.
  # This file is distributed under the same license as the xfsdump package.
 -# Jakub Bogusz <qboosh@pld-linux.org>, 2011-2014.
-+# Jakub Bogusz <qboosh@pld-linux.org>, 2011-2018.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2011-2022.
  #
  msgid ""
  msgstr ""
 -"Project-Id-Version: xfsdump 3.1.3+git\n"
-+"Project-Id-Version: xfsdump 3.1.8\n"
++"Project-Id-Version: xfsdump 3.1.10\n"
  "Report-Msgid-Bugs-To: \n"
 -"POT-Creation-Date: 2014-07-15 15:38+0200\n"
 -"PO-Revision-Date: 2014-07-15 16:28+0200\n"
-+"POT-Creation-Date: 2018-08-26 10:30+0200\n"
-+"PO-Revision-Date: 2018-08-26 10:31+0200\n"
++"POT-Creation-Date: 2022-02-17 18:46+0100\n"
++"PO-Revision-Date: 2022-02-17 19:15+0100\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "Language: pl\n"
@@ -82,7 +82,7 @@
 -#: .././restore/content.c:7029 .././restore/tree.c:2752
 -#: .././restore/tree.c:2793
 +#: .././common/content_common.c:120 .././common/global.c:361
-+#: .././common/main.c:1982 .././restore/content.c:7002
++#: .././common/main.c:1986 .././restore/content.c:7002
 +#: .././restore/content.c:7038 .././restore/tree.c:2761
 +#: .././restore/tree.c:2802
  msgid "end dialog"
@@ -160,15 +160,15 @@
 -#: .././restore/content.c:1006 .././restore/content.c:1067
 -#: .././restore/content.c:1096 .././restore/content.c:1118
 -#: .././restore/content.c:1164
-+#: .././common/drive.c:135 .././common/drive_minrmt.c:437
++#: .././common/drive.c:136 .././common/drive_minrmt.c:437
 +#: .././common/drive_minrmt.c:515 .././common/drive_minrmt.c:554
 +#: .././common/drive_scsitape.c:597 .././common/drive_scsitape.c:630
 +#: .././common/drive_scsitape.c:643 .././common/global.c:143
 +#: .././common/global.c:161 .././common/global.c:183 .././common/main.c:228
-+#: .././common/main.c:250 .././common/main.c:276 .././common/main.c:1154
-+#: .././common/media.c:118 .././dump/content.c:604 .././dump/content.c:623
-+#: .././dump/content.c:641 .././dump/content.c:676 .././dump/content.c:692
-+#: .././dump/content.c:1668 .././restore/content.c:986
++#: .././common/main.c:250 .././common/main.c:276 .././common/main.c:1158
++#: .././common/media.c:118 .././dump/content.c:658 .././dump/content.c:677
++#: .././dump/content.c:695 .././dump/content.c:730 .././dump/content.c:746
++#: .././dump/content.c:1713 .././restore/content.c:986
 +#: .././restore/content.c:1012 .././restore/content.c:1073
 +#: .././restore/content.c:1102 .././restore/content.c:1124
 +#: .././restore/content.c:1170
@@ -177,29 +177,29 @@
  msgstr "brak argumentu dla -%c\n"
  
 -#: .././common/drive.c:155
-+#: .././common/drive.c:158
++#: .././common/drive.c:159
  msgid "cannot specify source files and stdout together\n"
  msgstr ""
  "nie można określić jednocześnie plików źródłowych i standardowego wyjścia\n"
  
 -#: .././common/drive.c:158
-+#: .././common/drive.c:161
++#: .././common/drive.c:162
  msgid "cannot specify source files and stdin together\n"
  msgstr ""
  "nie można określić jednocześnie plików źródłowych i standardowego wejścia\n"
  
 -#: .././common/drive.c:186
-+#: .././common/drive.c:189
++#: .././common/drive.c:190
  msgid "no destination file(s) specified\n"
  msgstr "nie określono plików docelowych\n"
  
 -#: .././common/drive.c:189
-+#: .././common/drive.c:192
++#: .././common/drive.c:193
  msgid "no source file(s) specified\n"
  msgstr "nie podano plików źródłowych\n"
  
 -#: .././common/drive.c:223
-+#: .././common/drive.c:226
++#: .././common/drive.c:227
  #, c-format
  msgid "using %s strategy\n"
  msgstr "użyto strategii %s\n"
@@ -315,17 +315,17 @@
  msgstr "napotkano EOD: przyjęto czysty nośnik\n"
  
 -#: .././common/drive_minrmt.c:2589
-+#: .././common/drive_minrmt.c:2593
++#: .././common/drive_minrmt.c:2594
  msgid "encountered EOD : end of data\n"
  msgstr "napotkano EOD: koniec danych\n"
  
 -#: .././common/drive_minrmt.c:2643
-+#: .././common/drive_minrmt.c:2647
++#: .././common/drive_minrmt.c:2648
  msgid "tape record checksum error\n"
  msgstr "błąd sumy kontrolnej rekordu na taśmie\n"
  
 -#: .././common/drive_minrmt.c:2758 .././common/drive_scsitape.c:3290
-+#: .././common/drive_minrmt.c:2762 .././common/drive_scsitape.c:3294
++#: .././common/drive_minrmt.c:2763 .././common/drive_scsitape.c:3294
  #, c-format
  msgid ""
  "recommended media file size of %llu Mb less than estimated file header size "
@@ -334,59 +334,59 @@
  "rozmiar nagłówka pliku %llu Mb dla %s\n"
  
 -#: .././common/drive_minrmt.c:2832
-+#: .././common/drive_minrmt.c:2836
++#: .././common/drive_minrmt.c:2837
  msgid "audio"
  msgstr "dźwięk"
  
 -#: .././common/drive_minrmt.c:2878 .././common/drive_scsitape.c:3566
 -#: .././common/drive_scsitape.c:3919
-+#: .././common/drive_minrmt.c:2882 .././common/drive_scsitape.c:3570
++#: .././common/drive_minrmt.c:2883 .././common/drive_scsitape.c:3570
 +#: .././common/drive_scsitape.c:3923
  msgid "tape is write protected\n"
  msgstr "taśma jest zabezpieczona przed zapisem\n"
  
 -#: .././common/drive_minrmt.c:2890 .././common/drive_scsitape.c:3576
-+#: .././common/drive_minrmt.c:2894 .././common/drive_scsitape.c:3580
++#: .././common/drive_minrmt.c:2895 .././common/drive_scsitape.c:3580
  msgid "tape media error on write operation\n"
  msgstr "błąd nośnika taśmy podczas zapisu\n"
  
 -#: .././common/drive_minrmt.c:2893 .././common/drive_scsitape.c:3579
-+#: .././common/drive_minrmt.c:2897 .././common/drive_scsitape.c:3583
++#: .././common/drive_minrmt.c:2898 .././common/drive_scsitape.c:3583
  msgid "no more data can be written to this tape\n"
  msgstr "na tej taśmie nie można już zapisać więcej danych\n"
  
 -#: .././common/drive_minrmt.c:2965 .././common/drive_scsitape.c:3658
-+#: .././common/drive_minrmt.c:2969 .././common/drive_scsitape.c:3662
++#: .././common/drive_minrmt.c:2970 .././common/drive_scsitape.c:3662
  #, c-format
  msgid "RMTOPEN( %s, %d ) returns %d: errno=%d (%s)\n"
  msgstr "RMTOPEN( %s, %d ) zwraca %d: errno=%d (%s)\n"
  
 -#: .././common/drive_minrmt.c:2979 .././common/drive_scsitape.c:3672
-+#: .././common/drive_minrmt.c:2983 .././common/drive_scsitape.c:3676
++#: .././common/drive_minrmt.c:2984 .././common/drive_scsitape.c:3676
  #, c-format
  msgid "RMTCLOSE( %d ) returns %d: errno=%d (%s)\n"
  msgstr "RMTCLOSE( %d ) zwraca %d: errno=%d (%s)\n"
  
 -#: .././common/drive_minrmt.c:2992 .././common/drive_scsitape.c:3685
-+#: .././common/drive_minrmt.c:2996 .././common/drive_scsitape.c:3689
++#: .././common/drive_minrmt.c:2997 .././common/drive_scsitape.c:3689
  #, c-format
  msgid "RMTIOCTL( %d, %d, 0x%x ) returns %d: errno=%d (%s)\n"
  msgstr "RMTIOCTL( %d, %d, 0x%x ) zwraca %d: errno=%d (%s)\n"
  
 -#: .././common/drive_minrmt.c:3007 .././common/drive_scsitape.c:3700
-+#: .././common/drive_minrmt.c:3011 .././common/drive_scsitape.c:3704
++#: .././common/drive_minrmt.c:3012 .././common/drive_scsitape.c:3704
  #, c-format
  msgid "RMTREAD( %d, 0x%x, %u ) returns %d: errno=%d (%s)\n"
  msgstr "RMTREAD( %d, 0x%x, %u ) zwraca %d: errno=%d (%s)\n"
  
 -#: .././common/drive_minrmt.c:3022 .././common/drive_scsitape.c:3715
-+#: .././common/drive_minrmt.c:3026 .././common/drive_scsitape.c:3719
++#: .././common/drive_minrmt.c:3027 .././common/drive_scsitape.c:3719
  #, c-format
  msgid "RMTWRITE( %d, 0x%x, %u ) returns %d: errno=%d (%s)\n"
  msgstr "RMTWRITE( %d, 0x%x, %u ) zwraca %d: errno=%d (%s)\n"
  
 -#: .././common/drive_minrmt.c:3043 .././common/drive_scsitape.c:3743
-+#: .././common/drive_minrmt.c:3047 .././common/drive_scsitape.c:3747
++#: .././common/drive_minrmt.c:3048 .././common/drive_scsitape.c:3747
  #, c-format
  msgid "attempt to access/open remote tape drive %s failed: %d (%s)\n"
  msgstr ""
@@ -394,53 +394,53 @@
  "(%s)\n"
  
 -#: .././common/drive_minrmt.c:3080 .././common/drive_scsitape.c:3870
-+#: .././common/drive_minrmt.c:3084 .././common/drive_scsitape.c:3874
++#: .././common/drive_minrmt.c:3085 .././common/drive_scsitape.c:3874
  msgid "preparing drive\n"
  msgstr "przygotowywanie napędu\n"
  
 -#: .././common/drive_minrmt.c:3167 .././common/drive_scsitape.c:4063
-+#: .././common/drive_minrmt.c:3171 .././common/drive_scsitape.c:4067
++#: .././common/drive_minrmt.c:3172 .././common/drive_scsitape.c:4067
  msgid "giving up attempt to determining tape record size\n"
  msgstr "poddano się przy próbie określenia rozmiaru rekordu na taśmie\n"
  
 -#: .././common/drive_minrmt.c:3282
-+#: .././common/drive_minrmt.c:3286
++#: .././common/drive_minrmt.c:3287
  #, c-format
  msgid "unexpected tape error: errno %d nread %d blksz %d recsz %d \n"
  msgstr "nieoczekiwany błąd taśmy: errno %d nread %d blksz %d recsz %d\n"
  
 -#: .././common/drive_minrmt.c:3305 .././common/drive_scsitape.c:4497
-+#: .././common/drive_minrmt.c:3309 .././common/drive_scsitape.c:4501
++#: .././common/drive_minrmt.c:3310 .././common/drive_scsitape.c:4501
  #, c-format
  msgid "media file header version (%d) invalid: advancing\n"
  msgstr "błędna wersja nagłówka pliku nośnika (%d): przewijanie\n"
  
 -#: .././common/drive_minrmt.c:3316 .././common/drive_scsitape.c:4508
-+#: .././common/drive_minrmt.c:3320 .././common/drive_scsitape.c:4512
++#: .././common/drive_minrmt.c:3321 .././common/drive_scsitape.c:4512
  msgid "may be an EFS dump at BOT\n"
  msgstr "pod BOT może być zrzut EFS\n"
  
 -#: .././common/drive_minrmt.c:3321
-+#: .././common/drive_minrmt.c:3325
++#: .././common/drive_minrmt.c:3326
  msgid "This tape was erased earlier by xfsdump.\n"
  msgstr "Ta taśma była wcześniej wykasowana przez program xfsdump.\n"
  
 -#: .././common/drive_minrmt.c:3327 .././common/drive_scsitape.c:4511
-+#: .././common/drive_minrmt.c:3331 .././common/drive_scsitape.c:4515
++#: .././common/drive_minrmt.c:3332 .././common/drive_scsitape.c:4515
  msgid "bad media file header at BOT indicates foreign or corrupted tape\n"
  msgstr ""
  "błędny nagłówek pliku nośnika pod BOT oznacza obcą lub uszkodzoną taśmę\n"
  
 -#: .././common/drive_minrmt.c:3354 .././common/drive_scsitape.c:4553
 -#: .././common/drive_scsitape.c:4592
-+#: .././common/drive_minrmt.c:3358 .././common/drive_scsitape.c:4557
++#: .././common/drive_minrmt.c:3359 .././common/drive_scsitape.c:4557
 +#: .././common/drive_scsitape.c:4596
  msgid "cannot determine tape block size after two tries\n"
  msgstr "nie można określić rozmiaru bloku na taśmie po dwóch próbach\n"
  
 -#: .././common/drive_minrmt.c:3357 .././common/drive_scsitape.c:4563
 -#: .././common/drive_scsitape.c:4602
-+#: .././common/drive_minrmt.c:3361 .././common/drive_scsitape.c:4567
++#: .././common/drive_minrmt.c:3362 .././common/drive_scsitape.c:4567
 +#: .././common/drive_scsitape.c:4606
  msgid "assuming media is corrupt or contains non-xfsdump data\n"
  msgstr ""
@@ -448,43 +448,43 @@
  
 -#: .././common/drive_minrmt.c:3375 .././common/drive_scsitape.c:4581
 -#: .././common/drive_scsitape.c:4622
-+#: .././common/drive_minrmt.c:3379 .././common/drive_scsitape.c:4585
++#: .././common/drive_minrmt.c:3380 .././common/drive_scsitape.c:4585
 +#: .././common/drive_scsitape.c:4626
  msgid "cannot determine tape block size\n"
  msgstr "nie można określić rozmiaru bloku na taśmie\n"
  
 -#: .././common/drive_minrmt.c:3526 .././common/drive_scsitape.c:4806
-+#: .././common/drive_minrmt.c:3530 .././common/drive_scsitape.c:4810
++#: .././common/drive_minrmt.c:3531 .././common/drive_scsitape.c:4810
  #, c-format
  msgid "record %lld corrupt: bad record checksum\n"
  msgstr "uszkodzony rekord %lld: błędna suma kontrolna rekordu\n"
  
 -#: .././common/drive_minrmt.c:3536 .././common/drive_scsitape.c:4816
-+#: .././common/drive_minrmt.c:3540 .././common/drive_scsitape.c:4820
++#: .././common/drive_minrmt.c:3541 .././common/drive_scsitape.c:4820
  #, c-format
  msgid "record %lld corrupt: bad magic number\n"
  msgstr "uszkodzony rekord %lld: błędna liczba magiczna\n"
  
 -#: .././common/drive_minrmt.c:3544 .././common/drive_scsitape.c:4824
-+#: .././common/drive_minrmt.c:3548 .././common/drive_scsitape.c:4828
++#: .././common/drive_minrmt.c:3549 .././common/drive_scsitape.c:4828
  #, c-format
  msgid "record %lld corrupt: null dump id\n"
  msgstr "uszkodzony rekord %lld: zerowy identyfikator zrzutu\n"
  
 -#: .././common/drive_minrmt.c:3552 .././common/drive_scsitape.c:4832
-+#: .././common/drive_minrmt.c:3556 .././common/drive_scsitape.c:4836
++#: .././common/drive_minrmt.c:3557 .././common/drive_scsitape.c:4836
  #, c-format
  msgid "record %lld corrupt: dump id mismatch\n"
  msgstr "uszkodzony rekord %lld: niezgodność identyfikatora zrzutu\n"
  
 -#: .././common/drive_minrmt.c:3563 .././common/drive_scsitape.c:4839
-+#: .././common/drive_minrmt.c:3567 .././common/drive_scsitape.c:4843
++#: .././common/drive_minrmt.c:3568 .././common/drive_scsitape.c:4843
  #, c-format
  msgid "record %lld corrupt: incorrect record size in header\n"
  msgstr "uszkodzony rekord %lld: nieprawidłowy rozmiar rekordu w nagłówku\n"
  
 -#: .././common/drive_minrmt.c:3577 .././common/drive_scsitape.c:4846
-+#: .././common/drive_minrmt.c:3581 .././common/drive_scsitape.c:4850
++#: .././common/drive_minrmt.c:3582 .././common/drive_scsitape.c:4850
  #, c-format
  msgid ""
  "record %lld corrupt: record offset in header not a multiple of record size\n"
@@ -493,64 +493,67 @@
  "rozmiaru rekordu\n"
  
 -#: .././common/drive_minrmt.c:3589 .././common/drive_scsitape.c:4858
-+#: .././common/drive_minrmt.c:3593 .././common/drive_scsitape.c:4862
++#: .././common/drive_minrmt.c:3594 .././common/drive_scsitape.c:4862
  #, c-format
  msgid "record %lld corrupt: incorrect record offset in header (0x%llx)\n"
  msgstr ""
  "uszkodzony rekord %lld: nieprawidłowa pozycja rekordu w nagłówku (0x%llx)\n"
  
 -#: .././common/drive_minrmt.c:3600 .././common/drive_scsitape.c:4869
-+#: .././common/drive_minrmt.c:3604 .././common/drive_scsitape.c:4873
++#: .././common/drive_minrmt.c:3605 .././common/drive_scsitape.c:4873
  #, c-format
  msgid "record %lld corrupt: incorrect record padding offset in header\n"
  msgstr ""
  "uszkodzony rekord %lld: nieprawidłowa pozycja wyrównania rekordu w nagłówku\n"
  
 -#: .././common/drive_minrmt.c:3637
-+#: .././common/drive_minrmt.c:3641
++#: .././common/drive_minrmt.c:3642
  msgid "read_record encountered EOD : assuming blank media\n"
  msgstr "napotkano EOD w read_record: prawdopodobnie czysty nośnik\n"
  
 -#: .././common/drive_minrmt.c:3640
-+#: .././common/drive_minrmt.c:3644
++#: .././common/drive_minrmt.c:3645
  msgid "read_record encountered EOD : end of data\n"
  msgstr "napotkano EOD w read_record: koniec danych\n"
  
 -#: .././common/drive_minrmt.c:3655
-+#: .././common/drive_minrmt.c:3659
++#: .././common/drive_minrmt.c:3660
  msgid "unexpected EIO error attempting to read record\n"
  msgstr "nieoczekiwany błąd EIO przy próbie odczytu rekordu\n"
  
 -#: .././common/drive_minrmt.c:3678 .././common/drive_scsitape.c:4958
-+#: .././common/drive_minrmt.c:3682 .././common/drive_scsitape.c:4962
++#: .././common/drive_minrmt.c:3683 .././common/drive_scsitape.c:4962
  #, c-format
  msgid ""
  "unexpected error attempting to read record %lld: read returns %d, errno %d "
-@@ -427,15 +427,15 @@
+@@ -427,33 +427,33 @@
  "nieoczekiwany błąd przy próbie odczytu rekordu %lld: odczyt zwrócił %d, "
  "errno %d (%s)\n"
  
 -#: .././common/drive_minrmt.c:3851 .././common/drive_minrmt.c:3859
-+#: .././common/drive_minrmt.c:3855 .././common/drive_minrmt.c:3863
++#: .././common/drive_minrmt.c:3856 .././common/drive_minrmt.c:3864
  msgid "KB"
  msgstr "kB"
  
 -#: .././common/drive_minrmt.c:3856
-+#: .././common/drive_minrmt.c:3860
++#: .././common/drive_minrmt.c:3861
  msgid "MB"
  msgstr "MB"
  
 -#: .././common/drive_minrmt.c:3863 .././common/drive_scsitape.c:5147
-+#: .././common/drive_minrmt.c:3867 .././common/drive_scsitape.c:5151
++#: .././common/drive_minrmt.c:3868 .././common/drive_scsitape.c:5151
  #, c-format
  msgid ""
  "I/O metrics: %u by %s%s %sring; %lld/%lld (%.0lf%%) records streamed; %.0lfB/"
-@@ -444,16 +444,16 @@
- "Pomiary we/wy: %u na %s%s, pierścień%s; przesłano rekordów: %lld/%lld (%.0lf"
- "%%); %0lfB/s\n"
+ "s\n"
+ msgstr ""
+-"Pomiary we/wy: %u na %s%s, pierścień%s; przesłano rekordów: %lld/%lld (%.0lf"
+-"%%); %0lfB/s\n"
++"Pomiary we/wy: %u na %s%s, pierścień%s; przesłano rekordów: %lld/%lld "
++"(%.0lf%%); %0lfB/s\n"
  
 -#: .././common/drive_minrmt.c:3870 .././common/drive_scsitape.c:5154
-+#: .././common/drive_minrmt.c:3874 .././common/drive_scsitape.c:5158
++#: .././common/drive_minrmt.c:3875 .././common/drive_scsitape.c:5158
  msgid "pinned "
  msgstr " dowiązany"
  
@@ -692,7 +695,7 @@
 -#: .././common/drive_simple.c:276 .././common/drive_simple.c:361
 -#: .././dump/content.c:1369
 +#: .././common/drive_simple.c:286 .././common/drive_simple.c:371
-+#: .././dump/content.c:1378
++#: .././dump/content.c:1432
  #, c-format
  msgid "unable to open %s: %s\n"
  msgstr "nie udało się otworzyć %s: %s\n"
@@ -905,382 +908,382 @@
  msgstr " - aby przejść do stanu i sterowania, należy wcisnąć %s\n"
  
 -#: .././common/main.c:707
-+#: .././common/main.c:718
++#: .././common/main.c:722
  msgid "session interrupt timeout\n"
  msgstr "przekroczony limit czasu przerwania sesji\n"
  
 -#: .././common/main.c:775
-+#: .././common/main.c:786
++#: .././common/main.c:790
  msgid "session interrupt in progress: please wait\n"
  msgstr "przerwanie sesji w trakcie: proszę czekać\n"
  
 -#: .././common/main.c:790
-+#: .././common/main.c:801
++#: .././common/main.c:805
  #, c-format
  msgid "initiating session interrupt (timeout in %d sec)\n"
  msgstr "rozpoczynanie przerwania sesji (limit czasu %d s)\n"
  
 -#: .././common/main.c:896
-+#: .././common/main.c:914
++#: .././common/main.c:918
  #, c-format
  msgid "%s: usage: %s "
  msgstr "%s: składnia: %s "
  
 -#: .././common/main.c:900
-+#: .././common/main.c:918
++#: .././common/main.c:922
  msgid "(dump DMF dualstate files as offline)"
  msgstr "(zrzut plików dwustanowych DMF jako offline)"
  
 -#: .././common/main.c:901 .././common/main.c:953
-+#: .././common/main.c:919 .././common/main.c:971
++#: .././common/main.c:923 .././common/main.c:975
  msgid "<blocksize>"
  msgstr "<rozmiar bloku>"
  
 -#: .././common/main.c:902 .././common/main.c:954
-+#: .././common/main.c:920 .././common/main.c:972
++#: .././common/main.c:924 .././common/main.c:976
  msgid "<media change alert program> "
  msgstr "<program informujący o zmianie nośnika> "
  
 -#: .././common/main.c:903
-+#: .././common/main.c:921
++#: .././common/main.c:925
  msgid "<dump media file size> "
  msgstr "<rozmiar pliku nośnika zrzutu> "
  
 -#: .././common/main.c:904
-+#: .././common/main.c:922
++#: .././common/main.c:926
  msgid "(allow files to be excluded)"
  msgstr "(możliwość wykluczenia plików)"
  
 -#: .././common/main.c:905
-+#: .././common/main.c:923
++#: .././common/main.c:927
  msgid "<destination> ..."
  msgstr "<cel> ..."
  
 -#: .././common/main.c:906 .././common/main.c:957
-+#: .././common/main.c:924 .././common/main.c:975
++#: .././common/main.c:928 .././common/main.c:979
  msgid "(help)"
  msgstr "(pomoc)"
  
 -#: .././common/main.c:907
-+#: .././common/main.c:925
++#: .././common/main.c:929
  msgid "<level>"
  msgstr "<poziom>"
  
 -#: .././common/main.c:908 .././common/main.c:959
-+#: .././common/main.c:926 .././common/main.c:977
++#: .././common/main.c:930 .././common/main.c:981
  msgid "(force usage of minimal rmt)"
  msgstr "(wymuszenie użycia minimalnego rmt)"
  
 -#: .././common/main.c:909
-+#: .././common/main.c:927
++#: .././common/main.c:931
  msgid "(overwrite tape)"
  msgstr "(nadpisanie taśmy)"
  
 -#: .././common/main.c:910 .././common/main.c:962
-+#: .././common/main.c:928 .././common/main.c:980
++#: .././common/main.c:932 .././common/main.c:984
  msgid "<seconds between progress reports>"
  msgstr "<sekundy między informacjami o postępach>"
  
 -#: .././common/main.c:911 .././common/main.c:963
-+#: .././common/main.c:929 .././common/main.c:981
++#: .././common/main.c:933 .././common/main.c:985
  msgid "<use QIC tape settings>"
  msgstr "<ustawienia taśmy QIC>"
  
 -#: .././common/main.c:912 .././common/main.c:965
-+#: .././common/main.c:930 .././common/main.c:983
++#: .././common/main.c:934 .././common/main.c:987
  msgid "<subtree> ..."
  msgstr "<poddrzewo> ..."
  
 -#: .././common/main.c:913
-+#: .././common/main.c:931
++#: .././common/main.c:935
  msgid "<file> (use file mtime for dump time"
  msgstr "<plik> (użycie mtime pliku jako czasu zrzutu)"
  
 -#: .././common/main.c:914 .././common/main.c:967
-+#: .././common/main.c:932 .././common/main.c:985
++#: .././common/main.c:936 .././common/main.c:989
  msgid "<verbosity {silent, verbose, trace}>"
  msgstr "<szczegółowość {silent, verbose, trace}>"
  
 -#: .././common/main.c:915
-+#: .././common/main.c:933
++#: .././common/main.c:937
  msgid "<maximum file size>"
  msgstr "<maksymalny rozmiar pliku>"
  
 -#: .././common/main.c:916
-+#: .././common/main.c:934
++#: .././common/main.c:938
  msgid "(don't dump extended file attributes)"
  msgstr "(bez zrzutu rozszerzonych atrybutów plików)"
  
 -#: .././common/main.c:917
-+#: .././common/main.c:935
++#: .././common/main.c:939
  msgid "<base dump session id>"
  msgstr "<podstawowy id sesji zrzutu>"
  
 -#: .././common/main.c:919
-+#: .././common/main.c:937
++#: .././common/main.c:941
  msgid "(generate tape record checksums)"
  msgstr "(generowanie sum kontrolnych rekordów na taśmie)"
  
 -#: .././common/main.c:921
-+#: .././common/main.c:939
++#: .././common/main.c:943
  msgid "(skip unchanged directories)"
  msgstr "(pomijanie nie zmienionych katalogów)"
  
 -#: .././common/main.c:922
-+#: .././common/main.c:940
++#: .././common/main.c:944
  msgid "(pre-erase media)"
  msgstr "(wcześniejsze kasowanie nośnika)"
  
 -#: .././common/main.c:923 .././common/main.c:976
-+#: .././common/main.c:941 .././common/main.c:994
++#: .././common/main.c:945 .././common/main.c:998
  msgid "(don't prompt)"
  msgstr "(bez pytań)"
  
 -#: .././common/main.c:925
-+#: .././common/main.c:943
++#: .././common/main.c:947
  msgid "<minimum thread stack size>"
  msgstr "<minimalny rozmiar stosu wątku>"
  
 -#: .././common/main.c:926
-+#: .././common/main.c:944
++#: .././common/main.c:948
  msgid "<maximum thread stack size>"
  msgstr "<maksymalny rozmiar stosu wątku>"
  
 -#: .././common/main.c:928 .././common/main.c:977
-+#: .././common/main.c:946 .././common/main.c:995
++#: .././common/main.c:950 .././common/main.c:999
  msgid "(display dump inventory)"
  msgstr "(wyświetlenie inwentarza zrzutu)"
  
 -#: .././common/main.c:929 .././common/main.c:978
-+#: .././common/main.c:947 .././common/main.c:996
++#: .././common/main.c:951 .././common/main.c:1000
  msgid "(inhibit inventory update)"
  msgstr "(bez uaktualnienia inwentarza)"
  
 -#: .././common/main.c:930
-+#: .././common/main.c:948
++#: .././common/main.c:952
  msgid "(generate format 2 dump)"
  msgstr "(generowanie zrzutu w formacie 2)"
  
 -#: .././common/main.c:931 .././common/main.c:980
-+#: .././common/main.c:949 .././common/main.c:998
++#: .././common/main.c:953 .././common/main.c:1002
  msgid "<session label>"
  msgstr "<etykieta sesji>"
  
 -#: .././common/main.c:932
-+#: .././common/main.c:950
++#: .././common/main.c:954
  msgid "<media label> ..."
  msgstr "<etykieta nośnika> ..."
  
 -#: .././common/main.c:934 .././common/main.c:982
-+#: .././common/main.c:952 .././common/main.c:1000
++#: .././common/main.c:956 .././common/main.c:1004
  msgid "(timestamp messages)"
  msgstr "(znaczniki czasu dla komunikatów)"
  
 -#: .././common/main.c:936 .././common/main.c:984
-+#: .././common/main.c:954 .././common/main.c:1002
++#: .././common/main.c:958 .././common/main.c:1006
  msgid "<options file>"
  msgstr "<plik opcji>"
  
 -#: .././common/main.c:938 .././common/main.c:986
-+#: .././common/main.c:956 .././common/main.c:1004
++#: .././common/main.c:960 .././common/main.c:1008
  msgid "(pin down I/O buffers)"
  msgstr "(dowiązanie buforów we/wy)"
  
 -#: .././common/main.c:940 .././common/main.c:989
-+#: .././common/main.c:958 .././common/main.c:1007
++#: .././common/main.c:962 .././common/main.c:1011
  msgid "(resume)"
  msgstr "(wznowienie)"
  
 -#: .././common/main.c:941 .././common/main.c:991
-+#: .././common/main.c:959 .././common/main.c:1009
++#: .././common/main.c:963 .././common/main.c:1013
  msgid "(don't timeout dialogs)"
  msgstr "(bez limitów czasu dialogów)"
  
 -#: .././common/main.c:943 .././common/main.c:993
-+#: .././common/main.c:961 .././common/main.c:1011
++#: .././common/main.c:965 .././common/main.c:1015
  msgid "(unload media when change needed)"
  msgstr "(wysunięcie nośnika przy potrzebie zmiany)"
  
 -#: .././common/main.c:944 .././common/main.c:994
-+#: .././common/main.c:962 .././common/main.c:1012
++#: .././common/main.c:966 .././common/main.c:1016
  msgid "(show subsystem in messages)"
  msgstr "(wyświetlanie podsystemu w komunikatach)"
  
 -#: .././common/main.c:945 .././common/main.c:995
-+#: .././common/main.c:963 .././common/main.c:1013
++#: .././common/main.c:967 .././common/main.c:1017
  msgid "(show verbosity in messages)"
  msgstr "(wyświetlanie szczegółowości w komunikatach)"
  
 -#: .././common/main.c:947 .././common/main.c:998
-+#: .././common/main.c:965 .././common/main.c:1016
++#: .././common/main.c:969 .././common/main.c:1020
  msgid "<I/O buffer ring length>"
  msgstr "<długość pierścienia buforów we/wy>"
  
 -#: .././common/main.c:948
-+#: .././common/main.c:966
++#: .././common/main.c:970
  msgid "- (stdout)"
  msgstr "- (standardowe wyjście)"
  
 -#: .././common/main.c:949
-+#: .././common/main.c:967
++#: .././common/main.c:971
  msgid "<source (mntpnt|device)>"
  msgstr "<źródło (punkt montowania|urządzenie)>"
  
 -#: .././common/main.c:952
-+#: .././common/main.c:970
++#: .././common/main.c:974
  msgid "<alt. workspace dir> ..."
  msgstr "<alt. katalog roboczy> ..."
  
 -#: .././common/main.c:955
-+#: .././common/main.c:973
++#: .././common/main.c:977
  msgid "(don't overwrite existing files)"
  msgstr "(bez nadpisywania istniejących plików)"
  
 -#: .././common/main.c:956
-+#: .././common/main.c:974
++#: .././common/main.c:978
  msgid "<source> ..."
  msgstr "<źródło> ..."
  
 -#: .././common/main.c:958
-+#: .././common/main.c:976
++#: .././common/main.c:980
  msgid "(interactive)"
  msgstr "(tryb interaktywny)"
  
 -#: .././common/main.c:960
-+#: .././common/main.c:978
++#: .././common/main.c:982
  msgid "<file> (restore only if newer than)"
  msgstr "<plik> (odtworzenie tylko jeśli nowszy od pliku)"
  
 -#: .././common/main.c:961
-+#: .././common/main.c:979
++#: .././common/main.c:983
  msgid "(restore owner/group even if not root)"
  msgstr "(odtworzenie właściciela/grupy nawet jeśli nie root)"
  
 -#: .././common/main.c:964
-+#: .././common/main.c:982
++#: .././common/main.c:986
  msgid "(cumulative restore)"
  msgstr "(odtwarzanie skumulowane)"
  
 -#: .././common/main.c:966
-+#: .././common/main.c:984
++#: .././common/main.c:988
  msgid "(contents only)"
  msgstr "(tylko zawartość)"
  
 -#: .././common/main.c:968
-+#: .././common/main.c:986
++#: .././common/main.c:990
  msgid "(use small tree window)"
  msgstr "(użycie małego okna drzewa)"
  
 -#: .././common/main.c:969
-+#: .././common/main.c:987
++#: .././common/main.c:991
  msgid "(don't restore extended file attributes)"
  msgstr "(bez przywracania rozszerzonych atrybutów plików)"
  
 -#: .././common/main.c:970
-+#: .././common/main.c:988
++#: .././common/main.c:992
  msgid "(restore root dir owner/permissions)"
  msgstr "(odtworzenie właściciela/uprawnień katalogu głównego)"
  
 -#: .././common/main.c:971
-+#: .././common/main.c:989
++#: .././common/main.c:993
  msgid "(restore DMAPI event settings)"
  msgstr "(odtworzenie ustawień zdarzeń DMAPI)"
  
 -#: .././common/main.c:973
-+#: .././common/main.c:991
++#: .././common/main.c:995
  msgid "(check tape record checksums)"
  msgstr "(sprawdzenie sum kontrolnych)"
  
 -#: .././common/main.c:975
-+#: .././common/main.c:993
++#: .././common/main.c:997
  msgid "(don't overwrite if changed)"
  msgstr "(bez nadpisywania w przypadku zmiany)"
  
 -#: .././common/main.c:979
-+#: .././common/main.c:997
++#: .././common/main.c:1001
  msgid "(force use of format 2 generation numbers)"
  msgstr "(wymuszenie użycia liczb z formatu generacji 2)"
  
 -#: .././common/main.c:988
-+#: .././common/main.c:1006
++#: .././common/main.c:1010
  msgid "(force interrupted session completion)"
  msgstr "(wymuszenie dokończenia przerwanej sesji)"
  
 -#: .././common/main.c:990
-+#: .././common/main.c:1008
++#: .././common/main.c:1012
  msgid "<session id>"
  msgstr "<id sesji>"
  
 -#: .././common/main.c:997
-+#: .././common/main.c:1015
++#: .././common/main.c:1019
  msgid "<excluded subtree> ..."
  msgstr "<wykluczone poddrzewo> ..."
  
 -#: .././common/main.c:999
-+#: .././common/main.c:1017
++#: .././common/main.c:1021
  msgid "- (stdin)"
  msgstr "- (stdin)"
  
 -#: .././common/main.c:1000
-+#: .././common/main.c:1018
++#: .././common/main.c:1022
  msgid "<destination>"
  msgstr "<cel>"
  
 -#: .././common/main.c:1143
-+#: .././common/main.c:1161
++#: .././common/main.c:1165
  #, c-format
  msgid "-%c allowed only once\n"
  msgstr "-%c jest dozwolone tylko raz\n"
  
 -#: .././common/main.c:1164
-+#: .././common/main.c:1182
++#: .././common/main.c:1186
  #, c-format
  msgid "cannot open option file %s: %s (%d)\n"
  msgstr "nie można otworzyć pliku opcji %s: %s (%d)\n"
  
 -#: .././common/main.c:1176
-+#: .././common/main.c:1194
++#: .././common/main.c:1198
  #, c-format
  msgid "cannot stat option file %s: %s (%d)\n"
  msgstr "nie można wykonać stat na pliku opcji %s: %s (%d)\n"
  
 -#: .././common/main.c:1188
-+#: .././common/main.c:1206
++#: .././common/main.c:1210
  #, c-format
  msgid "given option file %s is not ordinary file\n"
  msgstr "podany plik opcji %s nie jest zwykłym plikiem\n"
  
 -#: .././common/main.c:1229
-+#: .././common/main.c:1247
++#: .././common/main.c:1251
  #, c-format
  msgid "read of option file %s failed: %s (%d)\n"
  msgstr "odczyt pliku opcji %s nie powiódł się: %s (%d)\n"
  
 -#: .././common/main.c:1382
-+#: .././common/main.c:1400
++#: .././common/main.c:1404
  #, c-format
  msgid "received signal %d (%s): cleanup and exit\n"
  msgstr "otrzymano sygnał %d (%s): sprzątanie i zakończenie\n"
  
 -#: .././common/main.c:1464
-+#: .././common/main.c:1482
++#: .././common/main.c:1486
  msgid "please enter seconds between progress reports, or 0 to disable"
  msgstr ""
  "proszę wpisać liczbę sekund między informacjami o postępach lub 0, aby "
  "wyłączyć"
  
 -#: .././common/main.c:1467
-+#: .././common/main.c:1485
++#: .././common/main.c:1489
  msgid "please enter seconds between progress reports"
  msgstr "proszę wpisać liczbę sekund między informacjami o postępach"
  
 -#: .././common/main.c:1521
-+#: .././common/main.c:1539
++#: .././common/main.c:1543
  msgid "status and control dialog"
  msgstr "okno stanu i sterowania"
  
 -#: .././common/main.c:1533
-+#: .././common/main.c:1551
++#: .././common/main.c:1555
  msgid ""
  "\n"
  "session interrupt in progress\n"
@@ -1289,85 +1292,85 @@
  "przerywanie sesji w trakcie\n"
  
 -#: .././common/main.c:1542
-+#: .././common/main.c:1560
++#: .././common/main.c:1564
  msgid "please select one of the following operations\n"
  msgstr "proszę wybrać jedną z następujących operacji\n"
  
 -#: .././common/main.c:1548 .././common/main.c:1592
-+#: .././common/main.c:1566 .././common/main.c:1610
++#: .././common/main.c:1570 .././common/main.c:1614
  msgid "interrupt this session"
  msgstr "przerwanie tej sesji"
  
 -#: .././common/main.c:1554
-+#: .././common/main.c:1572
++#: .././common/main.c:1576
  msgid "change verbosity"
  msgstr "zmiana ilości informacji"
  
 -#: .././common/main.c:1556
-+#: .././common/main.c:1574
++#: .././common/main.c:1578
  msgid "display metrics"
  msgstr "wyświetlenie metryk"
  
 -#: .././common/main.c:1559
-+#: .././common/main.c:1577
++#: .././common/main.c:1581
  msgid "confirm media change"
  msgstr "potwierdzenie zmiany nośnika"
  
 -#: .././common/main.c:1564
-+#: .././common/main.c:1582
++#: .././common/main.c:1586
  msgid "other controls"
  msgstr "inne funkcje"
  
 -#: .././common/main.c:1566 .././common/main.c:1594 .././common/main.c:1748
 -#: .././common/main.c:1785 .././common/main.c:1849 .././restore/content.c:2881
 -#: .././restore/content.c:2921
-+#: .././common/main.c:1584 .././common/main.c:1612 .././common/main.c:1766
-+#: .././common/main.c:1803 .././common/main.c:1867 .././restore/content.c:2888
++#: .././common/main.c:1588 .././common/main.c:1616 .././common/main.c:1770
++#: .././common/main.c:1807 .././common/main.c:1871 .././restore/content.c:2888
 +#: .././restore/content.c:2928
  msgid "continue"
  msgstr "kontynuacja"
  
 -#: .././common/main.c:1588
-+#: .././common/main.c:1606
++#: .././common/main.c:1610
  msgid "please confirm\n"
  msgstr "proszę potwierdzić\n"
  
 -#: .././common/main.c:1611 .././common/main.c:1802 .././common/main.c:1959
 -#: .././restore/content.c:2936 .././restore/content.c:2939
-+#: .././common/main.c:1629 .././common/main.c:1820 .././common/main.c:1977
++#: .././common/main.c:1633 .././common/main.c:1824 .././common/main.c:1981
 +#: .././restore/content.c:2943 .././restore/content.c:2946
  msgid "continuing\n"
  msgstr "kontynuacja\n"
  
 -#: .././common/main.c:1613
-+#: .././common/main.c:1631
++#: .././common/main.c:1635
  msgid "interrupt request accepted\n"
  msgstr "przyjęto żądanie przerwania\n"
  
 -#: .././common/main.c:1624
-+#: .././common/main.c:1642
++#: .././common/main.c:1646
  msgid "please select one of the following subsystems\n"
  msgstr "proszę wybrać jeden z następujących podsystemów\n"
  
 -#: .././common/main.c:1634
-+#: .././common/main.c:1652
++#: .././common/main.c:1656
  msgid "all of the above"
  msgstr "wszystkie powyższe"
  
 -#: .././common/main.c:1636 .././common/main.c:1676
-+#: .././common/main.c:1654 .././common/main.c:1694
++#: .././common/main.c:1658 .././common/main.c:1698
  msgid "no change"
  msgstr "bez zmian"
  
 -#: .././common/main.c:1653 .././common/main.c:1707 .././common/main.c:1888
 -#: .././common/main.c:1895 .././common/main.c:1926 .././common/main.c:1931
-+#: .././common/main.c:1671 .././common/main.c:1725 .././common/main.c:1906
-+#: .././common/main.c:1913 .././common/main.c:1944 .././common/main.c:1949
++#: .././common/main.c:1675 .././common/main.c:1729 .././common/main.c:1910
++#: .././common/main.c:1917 .././common/main.c:1948 .././common/main.c:1953
  msgid "no change\n"
  msgstr "bez zmian\n"
  
 -#: .././common/main.c:1656
-+#: .././common/main.c:1674
++#: .././common/main.c:1678
  msgid ""
  "all subsystems selected\n"
  "\n"
@@ -1376,187 +1379,187 @@
  "\n"
  
 -#: .././common/main.c:1669
-+#: .././common/main.c:1687
++#: .././common/main.c:1691
  msgid "silent"
  msgstr "cisza"
  
 -#: .././common/main.c:1670
-+#: .././common/main.c:1688
++#: .././common/main.c:1692
  msgid "verbose"
  msgstr "szczegóły"
  
 -#: .././common/main.c:1671
-+#: .././common/main.c:1689
++#: .././common/main.c:1693
  msgid "trace"
  msgstr "śledzenie"
  
 -#: .././common/main.c:1672
-+#: .././common/main.c:1690
++#: .././common/main.c:1694
  msgid "debug"
  msgstr "diagnostyka"
  
 -#: .././common/main.c:1673
-+#: .././common/main.c:1691
++#: .././common/main.c:1695
  msgid "nitty"
  msgstr "drobiazgi"
  
 -#: .././common/main.c:1674
-+#: .././common/main.c:1692
++#: .././common/main.c:1696
  msgid "nitty + 1"
  msgstr "drobiazgi + 1"
  
 -#: .././common/main.c:1686
-+#: .././common/main.c:1704
++#: .././common/main.c:1708
  msgid " (current)"
  msgstr " (bieżący)"
  
 -#: .././common/main.c:1724
-+#: .././common/main.c:1742
++#: .././common/main.c:1746
  msgid "level changed\n"
  msgstr "poziom zmieniony\n"
  
 -#: .././common/main.c:1735
-+#: .././common/main.c:1753
++#: .././common/main.c:1757
  msgid "please select one of the following metrics\n"
  msgstr "proszę wybrać jedną z następujących metryk\n"
  
 -#: .././common/main.c:1740
-+#: .././common/main.c:1758
++#: .././common/main.c:1762
  msgid "I/O"
  msgstr "we/wy"
  
 -#: .././common/main.c:1743
-+#: .././common/main.c:1761
++#: .././common/main.c:1765
  msgid "media inventory status"
  msgstr "stan inwentarza nośnika"
  
 -#: .././common/main.c:1745
-+#: .././common/main.c:1763
++#: .././common/main.c:1767
  msgid "needed media objects"
  msgstr "wymagane obiekty nośnika"
  
 -#: .././common/main.c:1819
-+#: .././common/main.c:1837
++#: .././common/main.c:1841
  msgid "please select one of the following controls\n"
  msgstr "proszę wybrać jedną z następujących funkcji\n"
  
 -#: .././common/main.c:1825
-+#: .././common/main.c:1843
++#: .././common/main.c:1847
  msgid "change interval of or disable progress reports"
  msgstr "zmiana częstotliwości lub wyłączenie informacji o postępach"
  
 -#: .././common/main.c:1828
-+#: .././common/main.c:1846
++#: .././common/main.c:1850
  msgid "enable progress reports"
  msgstr "włączenie informacji o postępach"
  
 -#: .././common/main.c:1832
-+#: .././common/main.c:1850
++#: .././common/main.c:1854
  msgid "hide log message levels"
  msgstr "ukrycie poziomów komunikatów logu"
  
 -#: .././common/main.c:1834
-+#: .././common/main.c:1852
++#: .././common/main.c:1856
  msgid "show log message levels"
  msgstr "wyświetlanie poziomów komunikatów logu"
  
 -#: .././common/main.c:1838
-+#: .././common/main.c:1856
++#: .././common/main.c:1860
  msgid "hide log message subsystems"
  msgstr "ukrycie podsystemów komunikatów logu"
  
 -#: .././common/main.c:1840
-+#: .././common/main.c:1858
++#: .././common/main.c:1862
  msgid "show log message subsystems"
  msgstr "wyświetlanie podsystemów komunikatów logu"
  
 -#: .././common/main.c:1844
-+#: .././common/main.c:1862
++#: .././common/main.c:1866
  msgid "hide log message timestamps"
  msgstr "ukrycie znaczników czasu komunikatów logu"
  
 -#: .././common/main.c:1846
-+#: .././common/main.c:1864
++#: .././common/main.c:1868
  msgid "show log message timestamps"
  msgstr "wyświetlanie znaczników czasu komunikatów logu"
  
 -#: .././common/main.c:1897
-+#: .././common/main.c:1915
++#: .././common/main.c:1919
  msgid "changing progress report interval to "
  msgstr "zmiana częstotliwości informacji o postępach na "
  
 -#: .././common/main.c:1899
-+#: .././common/main.c:1917
++#: .././common/main.c:1921
  #, c-format
  msgid "%d seconds\n"
  msgstr "%d sekund\n"
  
 -#: .././common/main.c:1910
-+#: .././common/main.c:1928
++#: .././common/main.c:1932
  msgid "enabling progress reports at "
  msgstr "włączanie informacji o postępach "
  
 -#: .././common/main.c:1912
-+#: .././common/main.c:1930
++#: .././common/main.c:1934
  #, c-format
  msgid "%d second intervals\n"
  msgstr "co %d sekund\n"
  
 -#: .././common/main.c:1924
-+#: .././common/main.c:1942
++#: .././common/main.c:1946
  msgid "disabling progress reports\n"
  msgstr "wyłączanie informacji o postępach\n"
  
 -#: .././common/main.c:1936
-+#: .././common/main.c:1954
++#: .././common/main.c:1958
  msgid "showing log message levels\n"
  msgstr "wyświetlanie poziomów komunikatów logu\n"
  
 -#: .././common/main.c:1938
-+#: .././common/main.c:1956
++#: .././common/main.c:1960
  msgid "hiding log message levels\n"
  msgstr "ukrywanie poziomów komunikatów logu\n"
  
 -#: .././common/main.c:1943
-+#: .././common/main.c:1961
++#: .././common/main.c:1965
  msgid "showing log message subsystems\n"
  msgstr "wyświetlanie podsystemów komunikatów logu\n"
  
 -#: .././common/main.c:1945
-+#: .././common/main.c:1963
++#: .././common/main.c:1967
  msgid "hiding log message subsystems\n"
  msgstr "ukrywanie podsystemów komunikatów logu\n"
  
 -#: .././common/main.c:1950
-+#: .././common/main.c:1968
++#: .././common/main.c:1972
  msgid "showing log message timestamps\n"
  msgstr "wyświetlanie znaczników czasu komunikatów logu\n"
  
 -#: .././common/main.c:1952
-+#: .././common/main.c:1970
++#: .././common/main.c:1974
  msgid "hiding log message timestamps\n"
  msgstr "ukrywanie znaczników czasu komunikatów logu\n"
  
 -#: .././common/main.c:2088
-+#: .././common/main.c:2106
++#: .././common/main.c:2110
  #, c-format
  msgid "unable to raise stack size hard limit from 0x%llx to 0x%llx\n"
  msgstr ""
  "nie udało się podnieść twardego limitu rozmiaru stosu z 0x%llx do 0x%llx\n"
  
 -#: .././common/main.c:2115
-+#: .././common/main.c:2133
++#: .././common/main.c:2137
  #, c-format
  msgid "unable to raise stack size soft limit from 0x%llx to 0x%llx\n"
  msgstr ""
  "nie udało się podnieść miękkiego limitu rozmiaru stosu z 0x%llx do 0x%llx\n"
  
 -#: .././common/main.c:2143
-+#: .././common/main.c:2161
++#: .././common/main.c:2165
  #, c-format
  msgid "unable to lower stack size soft limit from 0x%llx to 0x%llx\n"
  msgstr ""
-@@ -1276,52 +1275,52 @@
+@@ -1276,177 +1275,183 @@
  msgid "no media strategy available for selected restore source(s)\n"
  msgstr "brak dostępnej strategii nośnika dla wybranego źródła odtwarzania\n"
  
@@ -1619,12 +1622,15 @@
  #, c-format
  msgid "lock ordinal violation: tid %lu ord %d map %x\n"
  msgstr "naruszenie porządku blokad: tid %lu ord %d map %x\n"
-@@ -1330,123 +1329,123 @@
- msgid "slave"
- msgstr "podrzędnego"
+ 
+ #: .././common/ring.c:127
+-msgid "slave"
+-msgstr "podrzędnego"
++msgid "worker"
++msgstr "pracownika"
  
 -#: .././common/util.c:188 .././dump/content.c:2867
-+#: .././common/util.c:192 .././dump/content.c:2893
++#: .././common/util.c:192 .././dump/content.c:2938
  #, c-format
  msgid "failed to get bulkstat information for inode %llu\n"
  msgstr "nie udało się uzyskać informacji bulkstat dla i-węzła %llu\n"
@@ -1675,19 +1681,19 @@
  
  # used as: ... rozsz. atrybut/atrybutu przestrzeni %s
 -#: .././dump/content.c:217 .././restore/content.c:8874
-+#: .././dump/content.c:224 .././restore/content.c:8883
++#: .././dump/content.c:224 .././restore/content.c:8875
  msgid "root"
  msgstr "roota"
  
  # used as: ... rozsz. atrybut/atrybutu przestrzeni %s
 -#: .././dump/content.c:218 .././restore/content.c:8876
-+#: .././dump/content.c:225 .././restore/content.c:8885
++#: .././dump/content.c:225 .././restore/content.c:8877
  msgid "secure"
  msgstr "bezpieczeństwa"
  
  # used as: ... atrybut/atrybutu przestrzeni %s
 -#: .././dump/content.c:219 .././restore/content.c:8878
-+#: .././dump/content.c:226 .././restore/content.c:8887
++#: .././dump/content.c:226 .././restore/content.c:8879
  msgid "non-root"
  msgstr "nie-roota"
  
@@ -1704,153 +1710,159 @@
  msgstr "nie-katalogu"
  
 -#: .././dump/content.c:605
-+#: .././dump/content.c:612
++#: .././dump/content.c:544
++#, c-format
++msgid "unable to read dirents for directory ino %llu: %s\n"
++msgstr ""
++"nie udało się odczytać wpisów katalogu dla i-węzła katalogu %llu: %s\n"
++
++#: .././dump/content.c:666
  #, c-format
  msgid "-%c argument must be between 0 and %d\n"
  msgstr "argument dla -%c musi być liczbą między 0 a %d\n"
  
 -#: .././dump/content.c:623
-+#: .././dump/content.c:630
++#: .././dump/content.c:684
  #, c-format
  msgid "-%c argument (subtree) must be a relative pathname\n"
  msgstr "argument (poddrzewo) dla -%c musi być ścieżką względną\n"
  
 -#: .././dump/content.c:644
-+#: .././dump/content.c:651
++#: .././dump/content.c:705
  #, c-format
  msgid "-%c argument is not a valid file size\n"
  msgstr "argument dla -%c nie jest poprawnym rozmiarem pliku\n"
  
 -#: .././dump/content.c:694
-+#: .././dump/content.c:701
++#: .././dump/content.c:755
  #, c-format
  msgid "-%c argument not a valid dump session id\n"
  msgstr "argument dla -%c nie jest poprawnym id sesji dumpa\n"
  
 -#: .././dump/content.c:706
-+#: .././dump/content.c:713
++#: .././dump/content.c:767
  #, c-format
  msgid "may not specify both -%c and -%c\n"
  msgstr "nie można przekazać jednocześnie -%c i -%c\n"
  
 -#: .././dump/content.c:725
-+#: .././dump/content.c:732
++#: .././dump/content.c:786
  msgid "source file system not specified\n"
  msgstr "nie określono źródłowego systemu plików\n"
  
 -#: .././dump/content.c:776
-+#: .././dump/content.c:783
++#: .././dump/content.c:837
  #, c-format
  msgid "%s does not identify a file system\n"
  msgstr "%s nie identyfikuje systemu plików\n"
  
 -#: .././dump/content.c:788
-+#: .././dump/content.c:795
++#: .././dump/content.c:849
  #, c-format
  msgid "%s must be mounted to be dumped\n"
  msgstr "%s musi być zamontowany, aby można wykonać zrzut\n"
  
 -#: .././dump/content.c:827
-+#: .././dump/content.c:834
++#: .././dump/content.c:888
  #, c-format
  msgid "failed to save %s information, continuing\n"
  msgstr "nie udało się zapisać informacji %s, kontynuacja\n"
  
 -#: .././dump/content.c:878
-+#: .././dump/content.c:885
++#: .././dump/content.c:939
  #, c-format
  msgid "could not find specified base dump (%s) in inventory\n"
  msgstr "nie odnaleziono podanej podstawy zrzutu (%s) w inwentarzu\n"
  
 -#: .././dump/content.c:951
-+#: .././dump/content.c:958
++#: .././dump/content.c:1012
  #, c-format
  msgid ""
  "cannot select dump session %d as base for incremental dump: level must be "
-@@ -1455,12 +1454,12 @@
+@@ -1455,12 +1460,12 @@
  "nie można wybrać sesji dumpa %d jako podstawy do zrzutu przyrostowego: "
  "poziom musi być niższy niż %d\n"
  
 -#: .././dump/content.c:982
-+#: .././dump/content.c:989
++#: .././dump/content.c:1043
  msgid "cannot calculate incremental dump: online inventory not available\n"
  msgstr ""
  "nie można wyliczyć zrzutu przyrostowego: inwentarz online nie jest dostępny\n"
  
 -#: .././dump/content.c:1109
-+#: .././dump/content.c:1118
++#: .././dump/content.c:1172
  #, c-format
  msgid ""
  "most recent level %d dump was interrupted, but not resuming that dump since "
-@@ -1469,7 +1468,7 @@
+@@ -1469,7 +1474,7 @@
  "zrzut najnowszego poziomu %d został przerwany, ale nie jest wznawiany, "
  "ponieważ nie podano opcji wznowienia (-R)\n"
  
 -#: .././dump/content.c:1126 .././dump/content.c:1192
-+#: .././dump/content.c:1135 .././dump/content.c:1201
++#: .././dump/content.c:1189 .././dump/content.c:1255
  #, c-format
  msgid ""
  "most recent base for incremental dump was interrupted (level %u): must "
-@@ -1478,7 +1477,7 @@
+@@ -1478,7 +1483,7 @@
  "najnowsza podstawa dla zrzutu przyrostowego została przerwana (poziom %u): "
  "trzeba wznowić lub wykonać zrzut ponownie na poziomie %d lub niższym\n"
  
 -#: .././dump/content.c:1137 .././dump/content.c:1203
-+#: .././dump/content.c:1146 .././dump/content.c:1212
++#: .././dump/content.c:1200 .././dump/content.c:1266
  #, c-format
  msgid ""
  "level %u incremental subtree dump will be based on non-subtree level %u "
-@@ -1487,7 +1486,7 @@
+@@ -1487,7 +1492,7 @@
  "przyrostowy zrzut poddrzewa poziomu %u będzie oparty na zrzucie "
  "niepoddrzewowym poziomu %u\n"
  
 -#: .././dump/content.c:1146 .././dump/content.c:1212
-+#: .././dump/content.c:1155 .././dump/content.c:1221
++#: .././dump/content.c:1209 .././dump/content.c:1275
  #, c-format
  msgid ""
  "level %u incremental non-subtree dump will be based on subtree level %u "
-@@ -1496,7 +1495,7 @@
+@@ -1496,7 +1501,7 @@
  "przyrostowy zrzut niepoddrzewowy poziomu %u będzie oparty na zrzucie "
  "poddrzewa poziomu %u\n"
  
 -#: .././dump/content.c:1164
-+#: .././dump/content.c:1173
++#: .././dump/content.c:1227
  #, c-format
  msgid ""
  "level %u incremental subtree dump will be based on non-subtree level %u "
-@@ -1505,7 +1504,7 @@
+@@ -1505,7 +1510,7 @@
  "przyrostowy zrzut poddrzewa poziomu %u będzie oparty na wznowionym zrzucie "
  "niepoddrzewowym poziomu %u\n"
  
 -#: .././dump/content.c:1173
-+#: .././dump/content.c:1182
++#: .././dump/content.c:1236
  #, c-format
  msgid ""
  "level %u incremental non-subtree dump will be based on subtree level %u "
-@@ -1514,7 +1513,7 @@
+@@ -1514,7 +1519,7 @@
  "przyrostowy zrzut niepoddrzewowy poziomu %u będzie oparty na wznowionym "
  "zrzucie poddrzewa poziomu %u\n"
  
 -#: .././dump/content.c:1231
-+#: .././dump/content.c:1240
++#: .././dump/content.c:1294
  #, c-format
  msgid ""
  "level %u subtree dump will be based on non-subtree level %u resumed dump\n"
-@@ -1522,7 +1521,7 @@
+@@ -1522,7 +1527,7 @@
  "zrzut poddrzewa poziomu %u będzie oparty na wznowionym zrzucie "
  "niepoddrzewowym poziomu %u\n"
  
 -#: .././dump/content.c:1240
-+#: .././dump/content.c:1249
++#: .././dump/content.c:1303
  #, c-format
  msgid ""
  "level %u non-subtree dump will be based on subtree level %u resumed dump\n"
-@@ -1530,21 +1529,21 @@
+@@ -1530,21 +1535,21 @@
  "zrzut niepoddrzewowy poziomu %u będzie oparty na wznowionym zrzucie "
  "poddrzewa poziomu %u\n"
  
 -#: .././dump/content.c:1258
-+#: .././dump/content.c:1267
++#: .././dump/content.c:1321
  #, c-format
  msgid "cannot find earlier dump to base level %d increment upon\n"
  msgstr ""
@@ -1858,7 +1870,7 @@
  "miałby być oparty przyrost\n"
  
 -#: .././dump/content.c:1270
-+#: .././dump/content.c:1279
++#: .././dump/content.c:1333
  #, c-format
  msgid "most recent base dump (level %d begun %s) was interrupted: aborting\n"
  msgstr ""
@@ -1866,25 +1878,25 @@
  "kontynuować\n"
  
 -#: .././dump/content.c:1281
-+#: .././dump/content.c:1290
++#: .././dump/content.c:1344
  #, c-format
  msgid ""
  "resume (-R) option inappropriate: no interrupted level %d dump to resume\n"
-@@ -1552,7 +1551,7 @@
+@@ -1552,7 +1557,7 @@
  "niewłaściwie podana opcja wznowienia (-R): brak przerwanego zrzutu poziomu "
  "%d do wznowienia\n"
  
 -#: .././dump/content.c:1300
-+#: .././dump/content.c:1309
++#: .././dump/content.c:1363
  #, c-format
  msgid ""
  "resuming level %d incremental dump of %s:%s begun %s (incremental base level "
-@@ -1561,73 +1560,78 @@
+@@ -1561,73 +1566,80 @@
  "wznawianie zrzutu przyrostowego poziomu %d z %s:%s rozpoczęte %s (podstawowy "
  "poziom przyrostu %d rozpoczęty %s)\n"
  
 -#: .././dump/content.c:1311
-+#: .././dump/content.c:1320
++#: .././dump/content.c:1374
  #, c-format
  msgid "level %d incremental dump of %s:%s based on level %d dump begun %s\n"
  msgstr ""
@@ -1892,222 +1904,224 @@
  "%s\n"
  
 -#: .././dump/content.c:1322
-+#: .././dump/content.c:1331
++#: .././dump/content.c:1385
  #, c-format
  msgid "resuming level %d dump of %s:%s begun %s\n"
  msgstr "wznawianie zrzutu poziomu %d z %s:%s rozpoczęte %s\n"
  
 -#: .././dump/content.c:1329
-+#: .././dump/content.c:1338
++#: .././dump/content.c:1392
  #, c-format
  msgid "level %d dump of %s:%s\n"
  msgstr "zrzut poziomu %d z %s:%s\n"
  
 -#: .././dump/content.c:1343
-+#: .././dump/content.c:1352
++#: .././dump/content.c:1406
  #, c-format
  msgid "dump date: %s\n"
  msgstr "data zrzutu: %s\n"
  
 -#: .././dump/content.c:1352 .././restore/content.c:9578
-+#: .././dump/content.c:1361 .././restore/content.c:9587
++#: .././dump/content.c:1415 .././restore/content.c:9579
  #, c-format
  msgid "session id: %s\n"
  msgstr "id sesji: %s\n"
  
 -#: .././dump/content.c:1359
-+#: .././dump/content.c:1368
++#: .././dump/content.c:1422
  #, c-format
  msgid "session label: \"%s\"\n"
  msgstr "etykieta sesji: \"%s\"\n"
  
 -#: .././dump/content.c:1383
-+#: .././dump/content.c:1399
++#: .././dump/content.c:1446
  #, c-format
  msgid "could not stat %s\n"
  msgstr "nie udało się wykonać stat na %s\n"
  
 -#: .././dump/content.c:1393
-+#: .././dump/content.c:1414
++#: .././dump/content.c:1453
++#, c-format
++msgid ""
++"%s is not the root of the filesystem (bind mount?) - use primary mountpoint\n"
++msgstr ""
++"%s nie jest głównym katalogiem systemu plików (montowanie bind?) - należy użyć głównego punktu montowania\n"
++
++#: .././dump/content.c:1464
  msgid "failed to get bulkstat information for root inode\n"
  msgstr "nie udało się pobrać informacji bulkstat dla głównego i-węzła\n"
  
 -#: .././dump/content.c:1404 .././restore/content.c:1790
-+#: .././dump/content.c:1420
-+#, c-format
-+msgid "root ino %lld differs from mount dir ino %lld, bind mount?\n"
-+msgstr "i-węzeł główny %lld różni się od i-węzła katalogu montowania %lld - montowanie bind?\n"
-+
-+#: .././dump/content.c:1430 .././restore/content.c:1796
++#: .././dump/content.c:1475 .././restore/content.c:1796
  #, c-format
  msgid "unable to construct a file system handle for %s: %s\n"
  msgstr "nie udało się utworzyć uchwytu systemu plików dla %s: %s\n"
  
 -#: .././dump/content.c:1526
-+#: .././dump/content.c:1552
++#: .././dump/content.c:1597
  #, c-format
  msgid "estimated dump size: %llu bytes\n"
  msgstr "szacowany rozmiar zrzutu (w bajtach): %llu\n"
  
 -#: .././dump/content.c:1531
-+#: .././dump/content.c:1557
++#: .././dump/content.c:1602
  #, c-format
  msgid "estimated dump size per stream: %llu bytes\n"
  msgstr "szacowany rozmiar zrzutu na strumień (w bajtach): %llu\n"
  
 -#: .././dump/content.c:1634
-+#: .././dump/content.c:1660
++#: .././dump/content.c:1705
  #, c-format
  msgid "more -%c arguments than number of drives\n"
  msgstr "podano więcej argumentów -%c niż napędów\n"
  
 -#: .././dump/content.c:1655
-+#: .././dump/content.c:1681
++#: .././dump/content.c:1726
  #, c-format
  msgid "media labels given for only %d out of %d drives\n"
  msgstr "podano etykiety nośników tylko dla %d z %d napędów\n"
  
 -#: .././dump/content.c:2231
-+#: .././dump/content.c:2257
++#: .././dump/content.c:2302
  msgid ""
  "media change timeout will be treated as a request to stop using drive: can "
  "resume later\n"
-@@ -1635,7 +1639,7 @@
+@@ -1635,7 +1647,7 @@
  "przekroczenie limitu czasu na zmianę nośnika będzie traktowane jako żądanie "
  "zaprzestania używania napędu; możliwe jest późniejsze wznowienie\n"
  
 -#: .././dump/content.c:2239
-+#: .././dump/content.c:2265
++#: .././dump/content.c:2310
  msgid ""
  "media change decline will be treated as a request to stop using drive: can "
  "resume later\n"
-@@ -1643,57 +1647,57 @@
+@@ -1643,57 +1655,57 @@
  "odmowa zmiany nośnika będzie traktowana jako żądanie zaprzestania używania "
  "napędu; możliwe jest późniejsze wznowienie\n"
  
 -#: .././dump/content.c:2262
-+#: .././dump/content.c:2288
++#: .././dump/content.c:2333
  #, c-format
  msgid "creating dump session media file %u (media %u, file %u)\n"
  msgstr "tworzenie pliku nośnika %u dla sesji zrzutu (nośnik %u, plik %u)\n"
  
 -#: .././dump/content.c:2276
-+#: .././dump/content.c:2302
++#: .././dump/content.c:2347
  msgid "dumping ino map\n"
  msgstr "trwa zrzut mapy i-węzłów\n"
  
 -#: .././dump/content.c:2351
-+#: .././dump/content.c:2377
++#: .././dump/content.c:2422
  msgid "dumping non-directory files\n"
  msgstr "trwa zrzut plików nie będących katalogami\n"
  
 -#: .././dump/content.c:2470
-+#: .././dump/content.c:2496
++#: .././dump/content.c:2541
  msgid "ending media file\n"
  msgstr "kończenie pliku nośnika\n"
  
 -#: .././dump/content.c:2486
-+#: .././dump/content.c:2512
++#: .././dump/content.c:2557
  #, c-format
  msgid "media file size %lld bytes\n"
  msgstr "rozmiar pliku nośnika w bajtach: %lld\n"
  
 -#: .././dump/content.c:2570
-+#: .././dump/content.c:2596
++#: .././dump/content.c:2641
  msgid "inventory media file put failed\n"
  msgstr "przesłanie pliku nośnika do inwentarza nie powiodło się\n"
  
 -#: .././dump/content.c:2600
-+#: .././dump/content.c:2626
++#: .././dump/content.c:2671
  msgid "waiting for synchronized session inventory dump\n"
  msgstr "oczekiwanie na zsynchronizowany zrzut inwentarza sesji\n"
  
 -#: .././dump/content.c:2631
-+#: .././dump/content.c:2657
++#: .././dump/content.c:2702
  #, c-format
  msgid "ending stream: %ld seconds elapsed\n"
  msgstr "kończenie strumienia: upłynęło %ld s\n"
  
 -#: .././dump/content.c:2654
-+#: .././dump/content.c:2680
++#: .././dump/content.c:2725
  #, c-format
  msgid "dump size (non-dir files) : %llu bytes\n"
  msgstr "rozmiar zrzutu (plików nie-katalogów) w bajtach: %llu\n"
  
 -#: .././dump/content.c:2662 .././dump/content.c:6585
-+#: .././dump/content.c:2688 .././dump/content.c:6611
++#: .././dump/content.c:2733 .././dump/content.c:6650
  #, c-format
  msgid "unable to remove %s: %s\n"
  msgstr "nie udało się usunąć %s: %s\n"
  
 -#: .././dump/content.c:2670
-+#: .././dump/content.c:2696
++#: .././dump/content.c:2741
  #, c-format
  msgid "dump complete: %ld seconds elapsed\n"
  msgstr "zrzut zakończony: upłynęło %ld s\n"
  
 -#: .././dump/content.c:2677
-+#: .././dump/content.c:2703
++#: .././dump/content.c:2748
  #, c-format
  msgid ""
  "dump interrupted: %ld seconds elapsed: may resume later using -%c option\n"
-@@ -1701,42 +1705,42 @@
+@@ -1701,42 +1713,42 @@
  "zrzut przerwany: upłynęło %ld s; możliwe jest późniejsze wznowienie opcją -"
  "%c\n"
  
 -#: .././dump/content.c:2686
-+#: .././dump/content.c:2712
++#: .././dump/content.c:2757
  #, c-format
  msgid "dump interrupted: %ld seconds elapsed\n"
  msgstr "zrzut przerwany: upłynęło %ld s\n"
  
 -#: .././dump/content.c:2804
-+#: .././dump/content.c:2830
++#: .././dump/content.c:2875
  msgid "dumping directories\n"
  msgstr "trwa zrzut katalogów\n"
  
 -#: .././dump/content.c:2830
-+#: .././dump/content.c:2856
++#: .././dump/content.c:2901
  #, c-format
  msgid "SGI_FS_BULKSTAT failed: %s (%d)\n"
  msgstr "SGI_FS_BULKSTAT nie powiodło się: %s (%d)\n"
  
 -#: .././dump/content.c:2971
-+#: .././dump/content.c:2997
++#: .././dump/content.c:3042
  #, c-format
  msgid "unable to dump directory: ino %llu too large\n"
  msgstr "nie udało się zrzucić katalogu: i-węzeł %llu zbyt duży\n"
  
 -#: .././dump/content.c:2985
-+#: .././dump/content.c:3011
++#: .././dump/content.c:3056
  #, c-format
  msgid "unable to open directory: ino %llu: %s\n"
  msgstr "nie udało się otworzyć katalogu: i-węzeł %llu: %s\n"
  
 -#: .././dump/content.c:3013
-+#: .././dump/content.c:3039
++#: .././dump/content.c:3084
  #, c-format
  msgid "unable to read dirents (%d) for directory ino %llu: %s\n"
  msgstr ""
  "nie udało się odczytać wpisów katalogu (%d) dla i-węzła katalogu %llu: %s\n"
  
 -#: .././dump/content.c:3076
-+#: .././dump/content.c:3102
++#: .././dump/content.c:3147
  #, c-format
  msgid "encountered 0 ino (%s) in directory ino %llu: NOT dumping\n"
  msgstr "napotkano i-węzeł 0 (%s) w i-węźle katalogu %llu: BEZ zrzutu\n"
  
 -#: .././dump/content.c:3095
-+#: .././dump/content.c:3121
++#: .././dump/content.c:3166
  #, c-format
  msgid ""
  "could not stat dirent %s ino %llu: %s: using null generation count in "
-@@ -1745,28 +1749,28 @@
+@@ -1745,28 +1757,28 @@
  "nie udało się wykonać stat wpisu katalogu %s i-węzeł %llu: %s: użycie "
  "zerowego licznika generacji we wpisie katalogu\n"
  
 -#: .././dump/content.c:3200
-+#: .././dump/content.c:3226
++#: .././dump/content.c:3271
  #, c-format
  msgid "could not get list of %s attributes for %s ino %llu: %s (%d)\n"
  msgstr ""
@@ -2115,7 +2129,7 @@
  "(%d)\n"
  
 -#: .././dump/content.c:3297
-+#: .././dump/content.c:3323
++#: .././dump/content.c:3368
  #, c-format
  msgid "HSM could not filter %s attribute %s for %s ino %llu\n"
  msgstr ""
@@ -2123,7 +2137,7 @@
  "%s %llu\n"
  
 -#: .././dump/content.c:3348
-+#: .././dump/content.c:3374
++#: .././dump/content.c:3419
  #, c-format
  msgid "could not retrieve %s attributes for %s ino %llu: %s (%d)\n"
  msgstr ""
@@ -2131,16 +2145,16 @@
  "(%d)\n"
  
 -#: .././dump/content.c:3377
-+#: .././dump/content.c:3403
++#: .././dump/content.c:3448
  #, c-format
  msgid ""
  "attr_multi indicates error while retrieving %s attribute [%s] for %s ino "
-@@ -1775,14 +1779,14 @@
+@@ -1775,14 +1787,14 @@
  "attr_multi zgłasza błąd przy próbie odczytu atrybutu przestrzeni %s [%s] dla "
  "i-węzła %s %llu: %s (%d)\n"
  
 -#: .././dump/content.c:3449
-+#: .././dump/content.c:3475
++#: .././dump/content.c:3520
  #, c-format
  msgid "HSM could not add new %s attribute #%d for %s ino %llu\n"
  msgstr ""
@@ -2148,45 +2162,45 @@
  "%s %llu\n"
  
 -#: .././dump/content.c:3576
-+#: .././dump/content.c:3602
++#: .././dump/content.c:3647
  #, c-format
  msgid ""
  "%s extended attribute name for %s ino %llu too long: %u, max is %u: "
-@@ -1791,7 +1795,7 @@
+@@ -1791,7 +1803,7 @@
  "nazwa rozszerzonego atrybutu przestrzeni %s dla i-węzła %s %llu zbyt długa: "
  "%u, maksimum to %u: pominięto\n"
  
 -#: .././dump/content.c:3589
-+#: .././dump/content.c:3615
++#: .././dump/content.c:3660
  #, c-format
  msgid ""
  "%s extended attribute value for %s ino %llu too long: %u, max is %u: "
-@@ -1800,46 +1804,46 @@
+@@ -1800,46 +1812,46 @@
  "wartość rozszerzonego atrybutu przestrzeni %s dla -i-węzła %s %llu zbyt "
  "długa: %u, maksimum to %u: pominięto\n"
  
 -#: .././dump/content.c:3784
-+#: .././dump/content.c:3810
++#: .././dump/content.c:3855
  #, c-format
  msgid "inomap inconsistency ino %llu: %s but is now non-dir: NOT dumping\n"
  msgstr ""
  "niespójność mapy dla i-węzła %llu: %s, ale teraz to nie katalog; BEZ zrzutu\n"
  
 -#: .././dump/content.c:3802
-+#: .././dump/content.c:3828
++#: .././dump/content.c:3873
  #, c-format
  msgid "inomap inconsistency ino %llu: hsm detected error: NOT dumping\n"
  msgstr ""
  "niespójność mapy dla i-węzła %llu: przez HSM wykryto błąd; BEZ zrzutu\n"
  
 -#: .././dump/content.c:3880
-+#: .././dump/content.c:3906
++#: .././dump/content.c:3948
  #, c-format
  msgid "don't know how to dump ino %llu: mode %08x\n"
  msgstr "nie wiadomo, jak zrzucić i-węzeł %llu: tryb %08x\n"
  
 -#: .././dump/content.c:4008
-+#: .././dump/content.c:4034
++#: .././dump/content.c:4073
  #, c-format
  msgid "could not open regular file ino %llu mode 0x%08x: %s: not dumped\n"
  msgstr ""
@@ -2194,60 +2208,60 @@
  "zrzutu\n"
  
 -#: .././dump/content.c:4058
-+#: .././dump/content.c:4084
++#: .././dump/content.c:4123
  #, c-format
  msgid "dump interrupted prior to ino %llu offset %lld\n"
  msgstr "zrzut przerwany przed i-węzłem %llu, offset %lld\n"
  
 -#: .././dump/content.c:4293
-+#: .././dump/content.c:4319
++#: .././dump/content.c:4358
  #, c-format
  msgid "locking check failed ino %llu\n"
  msgstr "sprawdzenie blokady nie powiodło się na i-węźle %llu\n"
  
 -#: .././dump/content.c:4342
-+#: .././dump/content.c:4368
++#: .././dump/content.c:4407
  #, c-format
  msgid "dioinfo failed ino %llu\n"
  msgstr "dioinfo nie powiodło się na i-węźle %llu\n"
  
 -#: .././dump/content.c:4411
-+#: .././dump/content.c:4437
++#: .././dump/content.c:4476
  #, c-format
  msgid ""
  "getbmapx %d ino %lld mode 0x%08x offset %lld ix %d returns negative entry "
-@@ -1848,137 +1852,137 @@
+@@ -1848,137 +1860,137 @@
  "getbmapx %d, i-węzeł %lld, tryb 0x%08x, offset %lld, ix %d zwróciło ujemną "
  "liczbę wpisów\n"
  
 -#: .././dump/content.c:4426
-+#: .././dump/content.c:4452
++#: .././dump/content.c:4491
  #, c-format
  msgid "getbmapx %d ino %lld mode 0x%08x offset %lld failed: %s\n"
  msgstr ""
  "getbmapx %d, i-węzeł %lld, tryb 0x%08x, offset %lld nie powiodło się: %s\n"
  
 -#: .././dump/content.c:4448
-+#: .././dump/content.c:4474
++#: .././dump/content.c:4513
  #, c-format
  msgid "hsm detected an extent map error in ino %lld, skipping\n"
  msgstr "poprzez hsm wykryto błąd mapy ekstentów w i-węźle %lld, pominięto\n"
  
 -#: .././dump/content.c:4791
-+#: .././dump/content.c:4817
++#: .././dump/content.c:4856
  #, c-format
  msgid "can't lseek ino %llu\n"
  msgstr "nie można wykonać lseek na i-węzeł %llu\n"
  
 -#: .././dump/content.c:4805
-+#: .././dump/content.c:4831
++#: .././dump/content.c:4870
  #, c-format
  msgid "can't read ino %llu at offset %d (act=%d req=%d) rt=%d\n"
  msgstr ""
  "nie można odczytać i-węzła %llu pod offsetem %d (act=%d req=%d) rt=%d\n"
  
 -#: .././dump/content.c:5094
-+#: .././dump/content.c:5120
++#: .././dump/content.c:5159
  #, c-format
  msgid "unable to dump directory %llu entry %s (%llu): name too long\n"
  msgstr ""
@@ -2255,43 +2269,43 @@
  "długa\n"
  
 -#: .././dump/content.c:5195
-+#: .././dump/content.c:5221
++#: .././dump/content.c:5260
  msgid "dumping session inventory\n"
  msgstr "trwa zrzut inwentarza sesji\n"
  
 -#: .././dump/content.c:5204
-+#: .././dump/content.c:5230
++#: .././dump/content.c:5269
  msgid "unable to get session inventory to dump\n"
  msgstr "nie udało się pobrać inwentarza sesji do zrzutu\n"
  
 -#: .././dump/content.c:5226
-+#: .././dump/content.c:5252
++#: .././dump/content.c:5291
  msgid "beginning inventory media file\n"
  msgstr "rozpoczynanie pliku nośnika inwentarza\n"
  
 -#: .././dump/content.c:5235
-+#: .././dump/content.c:5261
++#: .././dump/content.c:5300
  msgid "media change timeout: session inventory not dumped\n"
  msgstr "upłynął limit czasu na zmianę nośnika: bez zrzutu inwentarza sesji\n"
  
 -#: .././dump/content.c:5241
-+#: .././dump/content.c:5267
++#: .././dump/content.c:5306
  msgid "media change declined: session inventory not dumped\n"
  msgstr "odmowa zmiany nośnika: bez zrzutu inwentarza sesji\n"
  
 -#: .././dump/content.c:5253 .././dump/content.c:5397
-+#: .././dump/content.c:5279 .././dump/content.c:5423
++#: .././dump/content.c:5318 .././dump/content.c:5462
  #, c-format
  msgid "media file %u (media %u, file %u)\n"
  msgstr "plik nośnika %u (nośnik %u, plik %u)\n"
  
 -#: .././dump/content.c:5281
-+#: .././dump/content.c:5307
++#: .././dump/content.c:5346
  msgid "ending inventory media file\n"
  msgstr "kończenie pliku nośnika inwentarza\n"
  
 -#: .././dump/content.c:5300
-+#: .././dump/content.c:5326
++#: .././dump/content.c:5365
  #, c-format
  msgid "encountered EOM while writing inventory media file size %lld bytes\n"
  msgstr ""
@@ -2299,46 +2313,46 @@
  "bajtach) %lld\n"
  
 -#: .././dump/content.c:5306
-+#: .././dump/content.c:5332
++#: .././dump/content.c:5371
  #, c-format
  msgid "inventory media file size %lld bytes\n"
  msgstr "rozmiar pliku nośnika inwentarza w bajtach: %lld\n"
  
 -#: .././dump/content.c:5332
-+#: .././dump/content.c:5358
++#: .././dump/content.c:5397
  msgid "inventory session media file put failed\n"
  msgstr "przesłanie pliku nośnika sesji inwentarza nie powiodło się\n"
  
 -#: .././dump/content.c:5357
-+#: .././dump/content.c:5383
++#: .././dump/content.c:5422
  msgid "writing stream terminator\n"
  msgstr "zapis terminatora strumienia\n"
  
 -#: .././dump/content.c:5372
-+#: .././dump/content.c:5398
++#: .././dump/content.c:5437
  msgid "beginning media stream terminator\n"
  msgstr "rozpoczynanie terminatora strumienia nośnika\n"
  
 -#: .././dump/content.c:5381
-+#: .././dump/content.c:5407
++#: .././dump/content.c:5446
  msgid "media change timeout: media stream terminator not written\n"
  msgstr ""
  "przekroczony limit czasu zmiany nośnika: terminator strumienia nośnika nie "
  "został zapisany\n"
  
 -#: .././dump/content.c:5386
-+#: .././dump/content.c:5412
++#: .././dump/content.c:5451
  msgid "media change declined: media stream terminator not written\n"
  msgstr ""
  "odmowa zmiany nośnika: terminator strumienia nośnika nie został zapisany\n"
  
 -#: .././dump/content.c:5403
-+#: .././dump/content.c:5429
++#: .././dump/content.c:5468
  msgid "ending media stream terminator\n"
  msgstr "kończenie terminatora strumienia nośnika\n"
  
 -#: .././dump/content.c:5422
-+#: .././dump/content.c:5448
++#: .././dump/content.c:5487
  #, c-format
  msgid "encountered EOM while writing media stream terminator size %lld bytes\n"
  msgstr ""
@@ -2346,173 +2360,173 @@
  "bajtach) %lld\n"
  
 -#: .././dump/content.c:5427
-+#: .././dump/content.c:5453
++#: .././dump/content.c:5492
  #, c-format
  msgid "media stream terminator size %lld bytes\n"
  msgstr "rozmiar terminatora strumienia nośnika (w bajtach): %lld\n"
  
 -#: .././dump/content.c:5624
-+#: .././dump/content.c:5650
++#: .././dump/content.c:5689
  #, c-format
  msgid "positioned at media file %u: dump %u, stream %u\n"
  msgstr "ustawiono na pliku nośnika %u: zrzut %u, strumień %u\n"
  
 -#: .././dump/content.c:5672 .././dump/content.c:6036
-+#: .././dump/content.c:5698 .././dump/content.c:6062
++#: .././dump/content.c:5737 .././dump/content.c:6101
  msgid "cannot interleave dump streams: must supply a blank media object\n"
  msgstr "nie można przeplatać strumieni zrzutów: trzeba podać pusty nośnik\n"
  
 -#: .././dump/content.c:5678
-+#: .././dump/content.c:5704
++#: .././dump/content.c:5743
  msgid "media contains valid xfsdump but does not support append\n"
  msgstr "nośnik zawiera poprawny xfsdump, ale nie obsługuje dołączania\n"
  
 -#: .././dump/content.c:5685
-+#: .././dump/content.c:5711
++#: .././dump/content.c:5750
  msgid "stream terminator found\n"
  msgstr "znaleziono terminator strumienia\n"
  
 -#: .././dump/content.c:5693
-+#: .././dump/content.c:5719
++#: .././dump/content.c:5758
  msgid "encountered media error attempting BSF\n"
  msgstr "napotkano błąd nośnika podczas próby BSF\n"
  
 -#: .././dump/content.c:5707
-+#: .././dump/content.c:5733
++#: .././dump/content.c:5772
  msgid ""
  "media contains non-xfsdump data or a corrupt xfsdump media file header at "
  "beginning of media\n"
-@@ -1986,23 +1990,23 @@
+@@ -1986,23 +1998,23 @@
  "nośnik zawiera dane inne niż xfsdump lub uszkodzony nagłówek pliku nośnika "
  "xfsdump na początku nośnika\n"
  
 -#: .././dump/content.c:5737
-+#: .././dump/content.c:5763
++#: .././dump/content.c:5802
  msgid "unable to overwrite\n"
  msgstr "nie można nadpisać\n"
  
 -#: .././dump/content.c:5742
-+#: .././dump/content.c:5768
++#: .././dump/content.c:5807
  msgid "repositioning to overwrite\n"
  msgstr "zmiana pozycji w celu nadpisania\n"
  
 -#: .././dump/content.c:5760
-+#: .././dump/content.c:5786
++#: .././dump/content.c:5825
  msgid "media may contain data. Overwrite option specified\n"
  msgstr "nośnik może zawierać dane. Podano opcję nadpisania\n"
  
 -#: .././dump/content.c:5788
-+#: .././dump/content.c:5814
++#: .././dump/content.c:5853
  msgid "at end of data\n"
  msgstr "na końcu danych\n"
  
 -#: .././dump/content.c:5807
-+#: .././dump/content.c:5833
++#: .././dump/content.c:5872
  msgid ""
  "encountered EOD but expecting a media stream terminator: assuming full "
  "media\n"
-@@ -2010,15 +2014,15 @@
+@@ -2010,15 +2022,15 @@
  "napotkano EOD, ale oczekiwano terminatora strumienia nośnika: przyjęto pełny "
  "nośnik\n"
  
 -#: .././dump/content.c:5819
-+#: .././dump/content.c:5845
++#: .././dump/content.c:5884
  msgid "encountered EOM: media is full\n"
  msgstr "napotkano EOM: nośnik jest pełny\n"
  
 -#: .././dump/content.c:5842
-+#: .././dump/content.c:5868
++#: .././dump/content.c:5907
  msgid "encountered corrupt or foreign data: assuming corrupted media\n"
  msgstr "napotkano uszkodzone lub obce dane: przyjęto uszkodzony nośnik\n"
  
 -#: .././dump/content.c:5860
-+#: .././dump/content.c:5886
++#: .././dump/content.c:5925
  msgid ""
  "encountered corrupt or foreign data but expecting a media stream terminator: "
  "assuming corrupted media\n"
-@@ -2026,7 +2030,7 @@
+@@ -2026,7 +2038,7 @@
  "napotkano uszkodzone lub obce dane, ale oczekiwano terminatora strumienia "
  "nośnika: przyjęto uszkodzony nośnik\n"
  
 -#: .././dump/content.c:5868
-+#: .././dump/content.c:5894
++#: .././dump/content.c:5933
  msgid ""
  "encountered corrupt or foreign data: unable to overwrite: assuming corrupted "
  "media\n"
-@@ -2034,262 +2038,254 @@
+@@ -2034,262 +2046,254 @@
  "napotkano uszkodzone lub obce dane: nie można nadpisać: przyjęto uszkodzony "
  "nośnik\n"
  
 -#: .././dump/content.c:5876
-+#: .././dump/content.c:5902
++#: .././dump/content.c:5941
  msgid "encountered corrupt or foreign data: repositioning to overwrite\n"
  msgstr "napotkano uszkodzone lub obce dane: zmiana pozycji w celu nadpisania\n"
  
 -#: .././dump/content.c:5895
-+#: .././dump/content.c:5921
++#: .././dump/content.c:5960
  #, c-format
  msgid "unexpected error from do_begin_read: %d\n"
  msgstr "nieoczekiwany błąd w do_begin_read: %d\n"
  
 -#: .././dump/content.c:5904
-+#: .././dump/content.c:5930
++#: .././dump/content.c:5969
  msgid "erasing media\n"
  msgstr "kasowanie nośnika\n"
  
 -#: .././dump/content.c:5952 .././restore/content.c:4800
-+#: .././dump/content.c:5978 .././restore/content.c:4807
++#: .././dump/content.c:6017 .././restore/content.c:4807
  #, c-format
  msgid "please change media: type %s to confirm media change\n"
  msgstr "proszę zmienić nośnik i wpisać %s, aby potwierdzić zmianę\n"
  
 -#: .././dump/content.c:6087
-+#: .././dump/content.c:6113
++#: .././dump/content.c:6152
  msgid "no media label specified\n"
  msgstr "nie podano etykiety nośnika\n"
  
 -#: .././dump/content.c:6112
-+#: .././dump/content.c:6138
++#: .././dump/content.c:6177
  msgid "encountered end of media while attempting to begin new media file\n"
  msgstr ""
  "napotkano koniec nośnika w trakcie próby rozpoczęcia nowego pliku nośnika\n"
  
 -#: .././dump/content.c:6158
-+#: .././dump/content.c:6184
++#: .././dump/content.c:6223
  msgid "encountered end of media while ending media file\n"
  msgstr "napotkano koniec nośnika w trakcie kończenia pliku nośnika\n"
  
 -#: .././dump/content.c:6301
-+#: .././dump/content.c:6327
++#: .././dump/content.c:6366
  #, c-format
  msgid "drive does not support media erase: ignoring -%c option\n"
  msgstr "urządzenie nie obsługuje kasowania nośnika: zignorowano opcję -%c\n"
  
 -#: .././dump/content.c:6577
-+#: .././dump/content.c:6603
++#: .././dump/content.c:6642
  #, c-format
  msgid "saving %s information for: %s\n"
  msgstr "zapis informacji %s dla: %s\n"
  
 -#: .././dump/content.c:6580
-+#: .././dump/content.c:6606
++#: .././dump/content.c:6645
  #, c-format
  msgid "overwriting: %s\n"
  msgstr "nadpisywanie: %s\n"
  
 -#: .././dump/content.c:6604
-+#: .././dump/content.c:6630
++#: .././dump/content.c:6669
  #, c-format
  msgid "%s failed with exit status: %d\n"
  msgstr "%s nie powiodło się z kodem wyjścia: %d\n"
  
 -#: .././dump/content.c:6610
-+#: .././dump/content.c:6636
++#: .././dump/content.c:6675
  #, c-format
  msgid "open failed %s: %s\n"
  msgstr "nie udało się otworzyć %s: %s\n"
  
 -#: .././dump/content.c:6617
-+#: .././dump/content.c:6643
++#: .././dump/content.c:6682
  #, c-format
  msgid "stat failed %s: %s\n"
  msgstr "stat na %s nie powiodło się: %s\n"
@@ -2606,7 +2620,7 @@
  msgstr "nie udało się odczytać mapy ekstentów dla i-węzła %llu: %s\n"
  
 -#: .././dump/inomap.c:1736
-+#: .././dump/inomap.c:1738
++#: .././dump/inomap.c:1735
  #, c-format
  msgid "unknown inode type: ino=%llu, mode=0x%04x 0%06o\n"
  msgstr "nieznany typ i-węzła: ino=%llu, tryb=0x%04x 0%06o\n"
@@ -2757,7 +2771,7 @@
  msgid ""
  "\n"
  "\n"
-@@ -2299,17 +2295,17 @@
+@@ -2299,17 +2303,17 @@
  "\n"
  "--------- fstab ------------\n"
  
@@ -2778,7 +2792,7 @@
  #, c-format
  msgid ""
  "FSid\t%s\n"
-@@ -2318,64 +2314,64 @@
+@@ -2318,64 +2322,64 @@
  "FSid    \t%s\n"
  "\n"
  
@@ -2856,7 +2870,7 @@
  #, c-format
  msgid ""
  "rmtioctl: Linux mtget structure of wrong size - got %d, wanted %d or %d\n"
-@@ -2383,81 +2379,81 @@
+@@ -2383,81 +2387,81 @@
  "rmtioctl: linuksowa struktura mtget o złym rozmiarze - otrzymano %d, "
  "oczekiwano %d lub %d\n"
  
@@ -2954,7 +2968,7 @@
  #, c-format
  msgid ""
  "do not specify destination directory if contents only restore invoked (-%c "
-@@ -2466,35 +2462,35 @@
+@@ -2466,35 +2470,35 @@
  "nie można podawać katalogu docelowego, jeśli wybrano tylko odtworzenie "
  "zawartości (opcja -%c)\n"
  
@@ -2980,8 +2994,10 @@
  #, c-format
  msgid "%s format corrupt or wrong endianness (0x%x, expected 0x%x)\n"
  msgstr ""
- "format %s uszkodzony lub o błędnej kolejności bajtów (0x%x, oczekiwano 0x"
- "%x)\n"
+-"format %s uszkodzony lub o błędnej kolejności bajtów (0x%x, oczekiwano 0x"
+-"%x)\n"
++"format %s uszkodzony lub o błędnej kolejności bajtów (0x%x, oczekiwano "
++"0x%x)\n"
  
 -#: .././restore/content.c:1385
 +#: .././restore/content.c:1391
@@ -2996,7 +3012,7 @@
  #, c-format
  msgid ""
  "%s format differs from previous restore due to page size change (was %lu, "
-@@ -2503,43 +2499,43 @@
+@@ -2503,43 +2507,43 @@
  "format %s inny niż przy poprzednim odtwarzaniu z powodu zmiany rozmiaru "
  "strony (poprzednio %lu, teraz %lu)\n"
  
@@ -3049,7 +3065,7 @@
  #, c-format
  msgid ""
  "-%c option required to resume or -%c option required to force completion of "
-@@ -2548,108 +2544,108 @@
+@@ -2548,108 +2552,108 @@
  "wymagana jest opcja -%c do wznowienia lub opcja -%c do wymuszenia "
  "zakończenia uprzednio przerwanej sesji odtwarzania\n"
  
@@ -3184,7 +3200,7 @@
  #, c-format
  msgid ""
  "restore interrupted: %ld seconds elapsed: may resume later using -%c option\n"
-@@ -2657,7 +2653,7 @@
+@@ -2657,7 +2661,7 @@
  "odtwarzanie przerwane; minęło %ld s; można wznowić później przy użyciu opcji "
  "-%c\n"
  
@@ -3193,7 +3209,7 @@
  #, c-format
  msgid ""
  "status at %02d:%02d:%02d: %llu/%llu directories reconstructed, %.1f%%%% "
-@@ -2666,7 +2662,7 @@
+@@ -2666,7 +2670,7 @@
  "status przy %02d:%02d:%02d: odtworzono katalogów: %llu/%llu, wykonane %.1f%%"
  "%%, przetworzono wpisów katalogów: %llu, minęło %ld s\n"
  
@@ -3202,7 +3218,7 @@
  #, c-format
  msgid ""
  "status at %02d:%02d:%02d: %llu/%llu files restored, %.1f%%%% complete, %ld "
-@@ -2675,24 +2671,24 @@
+@@ -2675,24 +2679,24 @@
  "status przy %02d:%02d:%02d: odtworzono plików: %llu/%llu, wykonane %.1f%%%%, "
  "minęło %ld s\n"
  
@@ -3232,7 +3248,7 @@
  msgid ""
  "dump is not self-contained, orphaned files expected if base dump(s) was not "
  "applied\n"
-@@ -2700,40 +2696,40 @@
+@@ -2700,40 +2704,40 @@
  "zrzut nie jest samodzielny, można oczekiwać osieroconych plików, jeśli nie "
  "nałożono zrzutów bazowych\n"
  
@@ -3282,7 +3298,7 @@
  #, c-format
  msgid ""
  "inventory session uuid (%s) does not match the media header's session uuid "
-@@ -2742,41 +2738,41 @@
+@@ -2742,41 +2746,41 @@
  "uuid sesji inwentarza (%s) nie zgadza się z uuidem sesji nagłówka nośnika "
  "(%s)\n"
  
@@ -3333,7 +3349,7 @@
  #, c-format
  msgid ""
  "hit EOD at stream %u object %u, yet inventory indicates last object index is "
-@@ -2785,7 +2781,7 @@
+@@ -2785,7 +2789,7 @@
  "napotkano EOD w strumieniu %u, obiekcie %u, ale inwentarz określa indeks "
  "ostatniego obiektu %u\n"
  
@@ -3342,7 +3358,7 @@
  #, c-format
  msgid ""
  "hit next dump at stream %u object %u file %u, yet inventory indicates last "
-@@ -2794,55 +2790,55 @@
+@@ -2794,55 +2798,55 @@
  "napotkano następny zrzut w strumieniu %u, obiekcie %u, pliku %u, ale "
  "inwentarz określa ostatni indeks obiektu %u\n"
  
@@ -3409,7 +3425,7 @@
  #, c-format
  msgid ""
  "the following dump has been found on drive %u\n"
-@@ -2851,7 +2847,7 @@
+@@ -2851,7 +2855,7 @@
  "w napędzie %u znaleziono następujący zrzut\n"
  "\n"
  
@@ -3418,7 +3434,7 @@
  #, c-format
  msgid ""
  "the following dump has been found\n"
-@@ -2860,7 +2856,7 @@
+@@ -2860,7 +2864,7 @@
  "znaleziono następujący zrzut\n"
  "\n"
  
@@ -3427,7 +3443,7 @@
  msgid ""
  "\n"
  "examine this dump?\n"
-@@ -2868,7 +2864,7 @@
+@@ -2868,7 +2872,7 @@
  "\n"
  "zbadać ten zrzut?\n"
  
@@ -3436,7 +3452,7 @@
  msgid ""
  "\n"
  "interactively restore from this dump?\n"
-@@ -2876,7 +2872,7 @@
+@@ -2876,7 +2880,7 @@
  "\n"
  "interaktywnie odtworzyć z tego zrzutu?\n"
  
@@ -3445,7 +3461,7 @@
  msgid ""
  "\n"
  "restore this dump?\n"
-@@ -2884,87 +2880,88 @@
+@@ -2884,202 +2888,199 @@
  "\n"
  "odtworzyć ten zrzut?\n"
  
@@ -3480,152 +3496,154 @@
  msgstr "zrzut pominięty\n"
  
 -#: .././restore/content.c:7323
-+#: .././restore/content.c:7332
++#: .././restore/content.c:7329
  #, c-format
  msgid "ino %llu: unknown file type: %08x\n"
  msgstr "i-węzeł %llu: nieznany typ pliku: %08x\n"
  
 -#: .././restore/content.c:7338
-+#: .././restore/content.c:7347
++#: .././restore/content.c:7344
  #, c-format
  msgid "unable to unlink current file prior to linking %s to %s: %s\n"
  msgstr "nie udało się usunąć bieżącego pliku przed dowiązaniem %s do %s: %s\n"
  
 -#: .././restore/content.c:7349
-+#: .././restore/content.c:7358
++#: .././restore/content.c:7355
  #, c-format
  msgid "attempt to link %s to %s failed: %s\n"
  msgstr "próba dowiązania %s do %s nie powiodła się: %s\n"
  
 -#: .././restore/content.c:7386 .././restore/content.c:7895
 -#: .././restore/content.c:8050
-+#: .././restore/content.c:7395 .././restore/content.c:7904
-+#: .././restore/content.c:8059
++#: .././restore/content.c:7392 .././restore/content.c:7896
++#: .././restore/content.c:8051
  #, c-format
  msgid "chown (uid=%u, gid=%u) %s failed: %s\n"
  msgstr "chown (uid=%u, gid=%u) pliku %s nie powiodło się: %s\n"
  
 -#: .././restore/content.c:7391
-+#: .././restore/content.c:7400
++#: .././restore/content.c:7397
  #, c-format
  msgid "stripping setuid bit on %s since chown failed\n"
  msgstr "kasowanie bitu setuid pliku %s z powodu niepowodzenia chown\n"
  
 -#: .././restore/content.c:7398
-+#: .././restore/content.c:7407
++#: .././restore/content.c:7404
  #, c-format
  msgid "stripping setgid bit on %s since chown failed\n"
  msgstr "kasowanie bitu setgid pliku %s z powodu niepowodzenia chown\n"
  
 -#: .././restore/content.c:7409
-+#: .././restore/content.c:7418
++#: .././restore/content.c:7415
  #, c-format
  msgid "unable to strip setuid/setgid on %s, unlinking file.\n"
  msgstr "nie udało się skasować bitu setuid/setgid pliku %s, usuwanie pliku.\n"
  
 -#: .././restore/content.c:7454
-+#: .././restore/content.c:7463
++#: .././restore/content.c:7460
  #, c-format
  msgid "%s (offset %lld)\n"
  msgstr "%s (offset %lld)\n"
  
 -#: .././restore/content.c:7481
-+#: .././restore/content.c:7490
++#: .././restore/content.c:7487
  #, c-format
  msgid "open of %s failed: %s: discarding ino %llu\n"
  msgstr "otwarcie %s nie powiodło się: %s: porzucanie i-węzła %llu\n"
  
 -#: .././restore/content.c:7491
-+#: .././restore/content.c:7500
++#: .././restore/content.c:7497
  #, c-format
  msgid "attempt to stat %s failed: %s\n"
  msgstr "próba wykonania stat na %s nie powiodła się: %s\n"
  
 -#: .././restore/content.c:7505
-+#: .././restore/content.c:7514
++#: .././restore/content.c:7511
  #, c-format
  msgid "attempt to truncate %s failed: %s\n"
  msgstr "próba ucięcia %s nie powiodła się: %s\n"
  
 -#: .././restore/content.c:7532 .././restore/content.c:7753
-+#: .././restore/content.c:7541 .././restore/content.c:7762
++#: .././restore/content.c:7538 .././restore/content.c:7759
 +#: .././restore/tree.c:2625
  #, c-format
  msgid ""
- "attempt to set extended attributes (xflags 0x%x, extsize = 0x%x, projid = 0x"
-@@ -2973,113 +2970,113 @@
+-"attempt to set extended attributes (xflags 0x%x, extsize = 0x%x, projid = 0x"
+-"%x) of %s failed: %s\n"
++"attempt to set extended attributes (xflags 0x%x, extsize = 0x%x, projid = "
++"0x%x) of %s failed: %s\n"
+ msgstr ""
  "próba ustawienia rozszerzonych atrybutów (xflags 0x%x, extsize = 0x%x, "
  "projid = 0x%x) pliku %s nie powiodła się: %s\n"
  
 -#: .././restore/content.c:7696 .././restore/content.c:7921
-+#: .././restore/content.c:7705 .././restore/content.c:7930
++#: .././restore/content.c:7702 .././restore/content.c:7922
  #, c-format
  msgid "unable to set access and modification times of %s: %s\n"
  msgstr "nie udało się ustawić czasów dostępu i modyfikacji pliku %s: %s\n"
  
 -#: .././restore/content.c:7715 .././restore/content.c:7909
-+#: .././restore/content.c:7724 .././restore/content.c:7918
++#: .././restore/content.c:7721 .././restore/content.c:7910
  #, c-format
  msgid "unable to set mode of %s: %s\n"
  msgstr "nie udało się ustawić uprawnień pliku %s: %s\n"
  
 -#: .././restore/content.c:7731
-+#: .././restore/content.c:7740
++#: .././restore/content.c:7737
  #, c-format
  msgid "attempt to set DMI attributes of %s failed: %s\n"
  msgstr "próba ustawienia atrybutów DMI pliku %s nie powiodła się: %s\n"
  
 -#: .././restore/content.c:7783
-+#: .././restore/content.c:7792
++#: .././restore/content.c:7789
  msgid "block special file"
  msgstr "plik urządzenia blokowego"
  
 -#: .././restore/content.c:7786
-+#: .././restore/content.c:7795
++#: .././restore/content.c:7792
  msgid "char special file"
  msgstr "plik urządzenia znakowego"
  
 -#: .././restore/content.c:7789
-+#: .././restore/content.c:7798
++#: .././restore/content.c:7795
  msgid "named pipe"
  msgstr "nazwany potok"
  
 -#: .././restore/content.c:7793
-+#: .././restore/content.c:7802
- msgid "XENIX named pipe"
- msgstr "nazwany potok XENIX"
- 
+-msgid "XENIX named pipe"
+-msgstr "nazwany potok XENIX"
+-
 -#: .././restore/content.c:7797
-+#: .././restore/content.c:7806
++#: .././restore/content.c:7798
  msgid "UNIX domain socket"
  msgstr "gniazdo uniksowe"
  
 -#: .././restore/content.c:7801
-+#: .././restore/content.c:7810
++#: .././restore/content.c:7802
  #, c-format
  msgid "%s: unknown file type: mode 0x%x ino %llu\n"
  msgstr "%s: nieznany rodzaj pliku: tryb 0x%x i-węzeł %llu\n"
  
 -#: .././restore/content.c:7829 .././restore/content.c:7877
-+#: .././restore/content.c:7838 .././restore/content.c:7886
++#: .././restore/content.c:7830 .././restore/content.c:7878
  #, c-format
  msgid "unable to create %s ino %llu %s: %s: discarding\n"
  msgstr "nie udało się utworzyć %s, i-węzeł %llu %s: %s: porzucono\n"
  
 -#: .././restore/content.c:7841
-+#: .././restore/content.c:7850
++#: .././restore/content.c:7842
  #, c-format
  msgid "pathname too long for bind of %s ino %llu %s: discarding\n"
  msgstr "ścieżka zbyt długa do dowiązania %s, i-węzeł %llu %s: porzucono\n"
  
 -#: .././restore/content.c:7858
-+#: .././restore/content.c:7867
++#: .././restore/content.c:7859
  #, c-format
  msgid "unable to bind %s ino %llu %s: %s: discarding\n"
  msgstr "nie udało się dowiązać %s, i-węzeł %llu %s: %s: porzucono\n"
  
 -#: .././restore/content.c:8010
-+#: .././restore/content.c:8019
++#: .././restore/content.c:8011
  #, c-format
  msgid "unable to create symlink ino %llu %s: src too long: discarding\n"
  msgstr ""
@@ -3633,7 +3651,7 @@
  "zbyt długie: porzucono\n"
  
 -#: .././restore/content.c:8034
-+#: .././restore/content.c:8043
++#: .././restore/content.c:8035
  #, c-format
  msgid "unable to create symlink ino %llu %s: %s: discarding\n"
  msgstr ""
@@ -3641,513 +3659,519 @@
  "porzucono\n"
  
 -#: .././restore/content.c:8121
-+#: .././restore/content.c:8130
++#: .././restore/content.c:8122
  msgid "corrupt file header\n"
  msgstr "uszkodzony nagłówek pliku\n"
  
 -#: .././restore/content.c:8126
-+#: .././restore/content.c:8135
++#: .././restore/content.c:8127
  msgid "bad file header checksum\n"
  msgstr "błędna suma kontrolna nagłówka pliku\n"
  
 -#: .././restore/content.c:8180
-+#: .././restore/content.c:8189
++#: .././restore/content.c:8181
  msgid "corrupt extent header\n"
  msgstr "uszkodzony nagłówek ekstentu\n"
  
 -#: .././restore/content.c:8185
-+#: .././restore/content.c:8194
++#: .././restore/content.c:8186
  msgid "bad extent header checksum\n"
  msgstr "błędna suma kontrolna nagłówka ekstentu\n"
  
 -#: .././restore/content.c:8244 .././restore/content.c:8259
-+#: .././restore/content.c:8253 .././restore/content.c:8268
++#: .././restore/content.c:8245 .././restore/content.c:8260
  msgid "bad directory entry header checksum\n"
  msgstr "błędna suma kontrolna nagłówka wpisu katalogu\n"
  
 -#: .././restore/content.c:8272
-+#: .././restore/content.c:8281
++#: .././restore/content.c:8273
  msgid "corrupt directory entry header\n"
  msgstr "uszkodzony nagłówek wpisu katalogu\n"
  
 -#: .././restore/content.c:8367
-+#: .././restore/content.c:8376
++#: .././restore/content.c:8368
  msgid "bad extattr header checksum\n"
  msgstr "błędna suma kontrolna nagłówka rozszerzonych atrybutów\n"
  
 -#: .././restore/content.c:8378
-+#: .././restore/content.c:8387
++#: .././restore/content.c:8379
  msgid "ignoring old-style extattr header checksums\n"
  msgstr ""
  "zignorowano sumy kontrolne nagłówka rozszerzonych atrybutów starego typu\n"
  
 -#: .././restore/content.c:8384
-+#: .././restore/content.c:8393
++#: .././restore/content.c:8385
  msgid "corrupt extattr header\n"
  msgstr "uszkodzony nagłówek rozszerzonych atrybutów\n"
  
 -#: .././restore/content.c:8452
-+#: .././restore/content.c:8461
++#: .././restore/content.c:8453
  #, c-format
  msgid ""
  "attempt to seek %s to %lld failed: %s: not restoring extent off %lld sz "
-@@ -3088,38 +3085,38 @@
+@@ -3088,38 +3089,38 @@
  "próba przemieszczenia %s na %lld nie powiodła się: %s: nie przywracanie "
  "ekstentu offset %lld rozm %lld\n"
  
 -#: .././restore/content.c:8467
-+#: .././restore/content.c:8476
++#: .././restore/content.c:8468
  #, c-format
  msgid "dioinfo %s failed: %s: discarding ino %llu\n"
  msgstr "dioinfo %s nie powiodło się: %s: porzucono i-węzeł %llu\n"
  
 -#: .././restore/content.c:8495 .././restore/content.c:8511
 -#: .././restore/content.c:8515
-+#: .././restore/content.c:8504 .././restore/content.c:8520
-+#: .././restore/content.c:8524
++#: .././restore/content.c:8496 .././restore/content.c:8512
++#: .././restore/content.c:8516
  msgid "end of media file"
  msgstr "koniec pliku nośnika"
  
 -#: .././restore/content.c:8499
-+#: .././restore/content.c:8508
++#: .././restore/content.c:8500
  msgid "end of recorded data"
  msgstr "koniec zapisanych danych"
  
 -#: .././restore/content.c:8503
-+#: .././restore/content.c:8512
++#: .././restore/content.c:8504
  msgid "end of media"
  msgstr "koniec nośnika"
  
 -#: .././restore/content.c:8507
-+#: .././restore/content.c:8516
++#: .././restore/content.c:8508
  msgid "media error or no media"
  msgstr "błąd nośnika lub brak nośnika"
  
 -#: .././restore/content.c:8520
-+#: .././restore/content.c:8529
++#: .././restore/content.c:8521
  msgid "dumping core"
  msgstr "zrzut pamięci"
  
 -#: .././restore/content.c:8524
-+#: .././restore/content.c:8533
++#: .././restore/content.c:8525
  #, c-format
  msgid "attempt to read %u bytes failed: %s\n"
  msgstr "próba odczytu bloku %u-bajtowego nie powiodła się: %s\n"
  
 -#: .././restore/content.c:8611 .././restore/content.c:8646
-+#: .././restore/content.c:8620 .././restore/content.c:8655
++#: .././restore/content.c:8612 .././restore/content.c:8647
  #, c-format
  msgid ""
  "attempt to write %u bytes to %s at offset %lld failed: only %d bytes "
-@@ -3128,46 +3125,46 @@
+@@ -3128,46 +3129,46 @@
  "próba zapisu bloku %u-bajtowego do %s pod %lld nie powiodła się: zapisano "
  "tylko %d bajtów\n"
  
 -#: .././restore/content.c:8637
-+#: .././restore/content.c:8646
++#: .././restore/content.c:8638
  #, c-format
  msgid "attempt to write %u bytes to %s at offset %lld failed: %s\n"
  msgstr "próba zapisu bloku %u-bajtowego do %s pod %lld nie powiodła się: %s\n"
  
 -#: .././restore/content.c:8686
-+#: .././restore/content.c:8695
++#: .././restore/content.c:8687
  msgid "Failed to allocate extended attribute buffer\n"
  msgstr "Nie udało się przydzielić bufora rozszerzonych atrybutów\n"
  
 -#: .././restore/content.c:8882
-+#: .././restore/content.c:8891
++#: .././restore/content.c:8883
  #, c-format
  msgid "unable to set %s extended attribute for %s: %s (%d)\n"
  msgstr ""
  "nie udało się ustawić rozszerzonego atrybutu przestrzeni %s dla %s: %s (%d)\n"
  
 -#: .././restore/content.c:9055
-+#: .././restore/content.c:9064
++#: .././restore/content.c:9056
  msgid "partial_reg: Out of records. Extend attrs applied early.\n"
  msgstr "partial_reg: Brak rekordów. Wcześnie nałożone rozszerzone atrybuty.\n"
  
 -#: .././restore/content.c:9227
-+#: .././restore/content.c:9236
++#: .././restore/content.c:9228
  msgid "overwrites inhibited"
  msgstr "nadpisania zabronione"
  
 -#: .././restore/content.c:9235
-+#: .././restore/content.c:9244
++#: .././restore/content.c:9236
  msgid "too old"
  msgstr "za stare"
  
 -#: .././restore/content.c:9244
-+#: .././restore/content.c:9253
++#: .././restore/content.c:9245
  msgid "existing version is newer"
  msgstr "istniejąca wersja jest nowsza"
  
 -#: .././restore/content.c:9324
-+#: .././restore/content.c:9333
++#: .././restore/content.c:9325
  msgid "session inventory unknown\n"
  msgstr "nieznany inwentarz sesji\n"
  
 -#: .././restore/content.c:9329
-+#: .././restore/content.c:9338
++#: .././restore/content.c:9330
  msgid "session inventory display\n"
  msgstr "wyświetlenie inwentarza sesji\n"
  
 -#: .././restore/content.c:9342
-+#: .././restore/content.c:9351
++#: .././restore/content.c:9343
  #, c-format
  msgid ""
  "\n"
-@@ -3176,7 +3173,7 @@
+@@ -3176,7 +3177,7 @@
  "\n"
  "strumień nośnika %u:\n"
  
 -#: .././restore/content.c:9346
-+#: .././restore/content.c:9355
++#: .././restore/content.c:9347
  msgid ""
  "\n"
  "    media objects not yet identified\n"
-@@ -3184,7 +3181,7 @@
+@@ -3184,7 +3185,7 @@
  "\n"
  "    nie zidentyfikowano jeszcze obiektów nośnika\n"
  
 -#: .././restore/content.c:9360
-+#: .././restore/content.c:9369
++#: .././restore/content.c:9361
  #, c-format
  msgid ""
  "\n"
-@@ -3195,47 +3192,47 @@
+@@ -3195,47 +3196,47 @@
  "    obiekt nośnika %u:\n"
  "\n"
  
 -#: .././restore/content.c:9365
-+#: .././restore/content.c:9374
++#: .././restore/content.c:9366
  msgid "    label: "
  msgstr "    etykieta: "
  
 -#: .././restore/content.c:9371
-+#: .././restore/content.c:9380
++#: .././restore/content.c:9372
  msgid "    label is blank\n"
  msgstr "    etykieta jest pusta\n"
  
 -#: .././restore/content.c:9378
-+#: .././restore/content.c:9387
++#: .././restore/content.c:9379
  #, c-format
  msgid "    id: %s\n"
  msgstr "    id: %s\n"
  
 -#: .././restore/content.c:9383
-+#: .././restore/content.c:9392
++#: .././restore/content.c:9384
  msgid "    label not identified\n"
  msgstr "    etykieta nie zidentyfikowana\n"
  
 -#: .././restore/content.c:9387
-+#: .././restore/content.c:9396
++#: .././restore/content.c:9388
  #, c-format
  msgid "    index within object of first media file: %u\n"
  msgstr "    indeks wewnątrz obiektu pierwszego pliku nośnika: %u\n"
  
 -#: .././restore/content.c:9393
-+#: .././restore/content.c:9402
++#: .././restore/content.c:9394
  #, c-format
  msgid "    index within stream of first media file: %u\n"
  msgstr "    indeks wewnątrz strumienia pierwszego pliku nośnika: %u\n"
  
 -#: .././restore/content.c:9401 .././restore/content.c:9637
-+#: .././restore/content.c:9410 .././restore/content.c:9646
++#: .././restore/content.c:9402 .././restore/content.c:9638
  #, c-format
  msgid "    now in drive %u\n"
  msgstr "    teraz w napędzie %u\n"
  
 -#: .././restore/content.c:9405 .././restore/content.c:9645
-+#: .././restore/content.c:9414 .././restore/content.c:9654
++#: .././restore/content.c:9406 .././restore/content.c:9646
  msgid "    now in drive\n"
  msgstr "    teraz w napędzie\n"
  
 -#: .././restore/content.c:9411
-+#: .././restore/content.c:9420
++#: .././restore/content.c:9412
  msgid "        media files not yet identified\n"
  msgstr "        pliki nośnika jeszcze nie zidentyfikowane\n"
  
 -#: .././restore/content.c:9424
-+#: .././restore/content.c:9433
++#: .././restore/content.c:9425
  #, c-format
  msgid ""
  "\n"
-@@ -3244,51 +3241,51 @@
+@@ -3244,51 +3245,51 @@
  "\n"
  "        plik nośnika %u"
  
 -#: .././restore/content.c:9436
-+#: .././restore/content.c:9445
++#: .././restore/content.c:9437
  #, c-format
  msgid "        size: %lld bytes\n"
  msgstr "        rozmiar: %lld (bajtów)\n"
  
 -#: .././restore/content.c:9442
-+#: .././restore/content.c:9451
++#: .././restore/content.c:9443
  msgid "        used for directory restoral\n"
  msgstr "        użyto do odtworzenia katalogu\n"
  
 -#: .././restore/content.c:9447
-+#: .././restore/content.c:9456
++#: .././restore/content.c:9448
  #, c-format
  msgid "        first extent contained: ino %llu off %lld\n"
  msgstr "        pierwszy ekstent zawierał: i-węzeł %llu offset %lld\n"
  
 -#: .././restore/content.c:9452
-+#: .././restore/content.c:9461
++#: .././restore/content.c:9453
  #, c-format
  msgid "        next extent to restore: ino %llu off %lld\n"
  msgstr "        następny ekstent do odtworzenia: i-węzeł %llu offset %lld\n"
  
 -#: .././restore/content.c:9457
-+#: .././restore/content.c:9466
++#: .././restore/content.c:9458
  #, c-format
  msgid "        rollback mark %lld\n"
  msgstr "        znacznik wycofania %lld\n"
  
 -#: .././restore/content.c:9462
-+#: .././restore/content.c:9471
++#: .././restore/content.c:9463
  msgid "        contains no selected non-directories\n"
  msgstr "        nie zawiera wybranych nie-katalogów\n"
  
 -#: .././restore/content.c:9467
-+#: .././restore/content.c:9476
++#: .././restore/content.c:9468
  msgid "        non-directories done\n"
  msgstr "        nie-katalogi skończone\n"
  
 -#: .././restore/content.c:9471
-+#: .././restore/content.c:9480
++#: .././restore/content.c:9472
  msgid "        contains session inventory\n"
  msgstr "        zawiera inwentarz sesji\n"
  
 -#: .././restore/content.c:9476
-+#: .././restore/content.c:9485
++#: .././restore/content.c:9477
  msgid "        is stream terminator\n"
  msgstr "        jest znacznikiem zakończenia strumienia\n"
  
 -#: .././restore/content.c:9480
-+#: .././restore/content.c:9489
++#: .././restore/content.c:9481
  msgid "        now reading\n"
  msgstr "        trwa odczyt\n"
  
 -#: .././restore/content.c:9485
-+#: .././restore/content.c:9494
++#: .././restore/content.c:9486
  msgid ""
  "\n"
  "        may be additional unidentified media files\n"
-@@ -3296,7 +3293,7 @@
+@@ -3296,7 +3297,7 @@
  "\n"
  "        mogą być dodatkowe niezidentyfikowane pliki nośnika\n"
  
 -#: .././restore/content.c:9491
-+#: .././restore/content.c:9500
++#: .././restore/content.c:9492
  msgid ""
  "\n"
  "    may be additional unidentified media objects\n"
-@@ -3306,54 +3303,54 @@
+@@ -3306,54 +3307,54 @@
  "    mogą być dodatkowe niezidentyfikowane obiekty nośnika\n"
  "\n"
  
 -#: .././restore/content.c:9545
-+#: .././restore/content.c:9554
++#: .././restore/content.c:9546
  #, c-format
  msgid "hostname: %s\n"
  msgstr "nazwa hosta: %s\n"
  
 -#: .././restore/content.c:9548
-+#: .././restore/content.c:9557
++#: .././restore/content.c:9549
  #, c-format
  msgid "mount point: %s\n"
  msgstr "punkt montowania: %s\n"
  
 -#: .././restore/content.c:9551
-+#: .././restore/content.c:9560
++#: .././restore/content.c:9552
  #, c-format
  msgid "volume: %s\n"
  msgstr "wolumen: %s\n"
  
 -#: .././restore/content.c:9554
-+#: .././restore/content.c:9563
++#: .././restore/content.c:9555
  #, c-format
  msgid "session time: %s"
  msgstr "czas sesji: %s"
  
 -#: .././restore/content.c:9557
-+#: .././restore/content.c:9566
++#: .././restore/content.c:9558
  #, c-format
  msgid "level: %s%s\n"
  msgstr "poziom: %s%s\n"
  
 -#: .././restore/content.c:9561
-+#: .././restore/content.c:9570
++#: .././restore/content.c:9562
  msgid " resumed"
  msgstr " wznowiony"
  
 -#: .././restore/content.c:9565
-+#: .././restore/content.c:9574
++#: .././restore/content.c:9566
  msgid "session label: "
  msgstr "etykieta sesji: "
  
 -#: .././restore/content.c:9570
-+#: .././restore/content.c:9579
++#: .././restore/content.c:9571
  msgid "media label: "
  msgstr "etykieta nośnika: "
  
 -#: .././restore/content.c:9575
-+#: .././restore/content.c:9584
++#: .././restore/content.c:9576
  #, c-format
  msgid "file system id: %s\n"
  msgstr "ID systemu plików: %s\n"
  
 -#: .././restore/content.c:9581
-+#: .././restore/content.c:9590
++#: .././restore/content.c:9582
  #, c-format
  msgid "media id: %s\n"
  msgstr "ID nośnika: %s\n"
  
 -#: .././restore/content.c:9601
-+#: .././restore/content.c:9610
++#: .././restore/content.c:9602
  msgid ""
  "the following media objects contain media files not yet tried for directory "
  "hierarchy restoral:\n"
-@@ -3361,20 +3358,20 @@
+@@ -3361,20 +3362,20 @@
  "następujące obiekty nośnika zawierają pliki nośnika, które jeszcze nie były "
  "użyte do próby odtworzenia hierarchii katalogów:\n"
  
 -#: .././restore/content.c:9607
-+#: .././restore/content.c:9616
++#: .././restore/content.c:9608
  msgid "the following media objects are needed:\n"
  msgstr "są potrzebne następujące obiekty nośnika:\n"
  
 -#: .././restore/content.c:9620
-+#: .././restore/content.c:9629
++#: .././restore/content.c:9621
  #, c-format
  msgid "%2u. label: "
  msgstr "%2u. etykieta: "
  
 -#: .././restore/content.c:9626
-+#: .././restore/content.c:9635
++#: .././restore/content.c:9627
  msgid "    id: "
  msgstr "    id: "
  
 -#: .././restore/content.c:9656
-+#: .././restore/content.c:9665
++#: .././restore/content.c:9657
  msgid ""
  "\n"
  "there are additional unidentified media objects containing media files not "
-@@ -3384,7 +3381,7 @@
+@@ -3384,7 +3385,7 @@
  "istnieją dodatkowe, niezidentyfikowane obiekty nośnika zawierające pliki "
  "nośnika jeszcze nie użyte do próby odtworzenia hierarchii katalogów:\n"
  
 -#: .././restore/content.c:9660
-+#: .././restore/content.c:9669
++#: .././restore/content.c:9661
  msgid ""
  "\n"
  "there are unidentified media objects containing media files not yet tried "
-@@ -3394,7 +3391,7 @@
+@@ -3394,7 +3395,7 @@
  "istnieją niezidentyfikowane obiekty nośnika, zawierające pliki nośnika "
  "jeszcze nie użyte do próby odtworzenia hierarchii katalogów:\n"
  
 -#: .././restore/content.c:9667
-+#: .././restore/content.c:9676
++#: .././restore/content.c:9668
  msgid ""
  "\n"
  "there are additional unidentified media objects not yet fully restored\n"
-@@ -3403,7 +3400,7 @@
+@@ -3403,7 +3404,7 @@
  "istnieją dodatkowe, niezidentyfikowane obiekty nośnika, jeszcze nie w pełni "
  "odtworzone\n"
  
 -#: .././restore/content.c:9670
-+#: .././restore/content.c:9679
++#: .././restore/content.c:9671
  msgid ""
  "\n"
  "there are unidentified media objects not yet fully restored\n"
-@@ -3411,7 +3408,7 @@
+@@ -3411,7 +3412,7 @@
  "\n"
  "istnieją niezidentyfikowane obiekty nośnika, jeszcze nie w pełni odtworzone\n"
  
 -#: .././restore/content.c:9677
-+#: .././restore/content.c:9686
++#: .././restore/content.c:9678
  msgid ""
  "\n"
  "there may be additional unidentified media objects containing media files "
-@@ -3421,7 +3418,7 @@
+@@ -3421,7 +3422,7 @@
  "mogą istnieć dodatkowe, niezidentyfikowane obiekty nośnika, zawierające "
  "pliki nośnika jeszcze nie użyte do próby odtworzenia hierarchii katalogów:\n"
  
 -#: .././restore/content.c:9681
-+#: .././restore/content.c:9690
++#: .././restore/content.c:9682
  msgid ""
  "\n"
  "there may be unidentified media objects containing media files not yet tried "
-@@ -3431,7 +3428,7 @@
+@@ -3431,7 +3432,7 @@
  "mogą istnieć niezidentyfikowane obiekty nośnika, zawierające pliki nośnika "
  "jeszcze nie użyte do próby odtworzenia hierarchii katalogów:\n"
  
 -#: .././restore/content.c:9689
-+#: .././restore/content.c:9698
++#: .././restore/content.c:9690
  msgid ""
  "\n"
  "there may be additional unidentified media objects not yet fully restored\n"
-@@ -3440,110 +3437,110 @@
+@@ -3440,110 +3441,110 @@
  "mogą istnieć dodatkowe, niezidentyfikowane obiekty nośnika, jeszcze nie w "
  "pełni odtworzone\n"
  
 -#: .././restore/content.c:9692
-+#: .././restore/content.c:9701
++#: .././restore/content.c:9693
  msgid "\there may be unidentified media objects not yet fully restored\n"
  msgstr ""
  "\tmogą istnieć niezidentyfikowane obiekty nośnika, jeszcze nie w pełni "
  "odtworzone\n"
  
 -#: .././restore/content.c:9699
-+#: .././restore/content.c:9708
++#: .././restore/content.c:9700
  msgid "no additional media objects needed\n"
  msgstr "nie są potrzebne dodatkowe obiekty nośnika\n"
  
 -#: .././restore/content.c:9714 .././restore/tree.c:2531
-+#: .././restore/content.c:9723 .././restore/tree.c:2540
++#: .././restore/content.c:9715 .././restore/tree.c:2540
  #, c-format
  msgid "path_to_handle of %s failed:%s\n"
  msgstr "path_to_handle na %s nie powiodło się: %s\n"
  
 -#: .././restore/content.c:9723
-+#: .././restore/content.c:9732
++#: .././restore/content.c:9724
  #, c-format
  msgid "fssetdm_by_handle of %s failed %s\n"
  msgstr "fssetdm_by_handle na %s nie powiodło się: %s\n"
  
 -#: .././restore/content.c:9742
-+#: .././restore/content.c:9751
++#: .././restore/content.c:9743
  #, c-format
  msgid "%s quota information written to '%s'\n"
  msgstr "informacje o limitach %s zapisano do '%s'\n"
  
 -#: .././restore/dirattr.c:230
-+#: .././restore/dirattr.c:234
++#: .././restore/dirattr.c:82 .././restore/dirattr.c:92
++#, c-format
++msgid "attempt to reserve %lld bytes for %s using %s failed: %s (%d)\n"
++msgstr ""
++"próba zarezerwowania %lld bajtów dla %s przy użyciu %s nie powiodła się: %s "
++"(%d)\n"
++
++#: .././restore/dirattr.c:274
  #, c-format
  msgid "could not find directory attributes file %s: %s\n"
  msgstr "nie udało się odnaleźć pliku atrybutów katalogów %s: %s\n"
  
 -#: .././restore/dirattr.c:246
-+#: .././restore/dirattr.c:250
++#: .././restore/dirattr.c:285
  #, c-format
  msgid "could not create directory attributes file %s: %s\n"
  msgstr "nie udało się odnaleźć pliku atrybutów katalogów %s: %s\n"
  
 -#: .././restore/dirattr.c:291 .././restore/namreg.c:206
-+#: .././restore/dirattr.c:295 .././restore/namreg.c:210
- #, c-format
- msgid "attempt to reserve %lld bytes for %s using %s failed: %s (%d)\n"
- msgstr ""
- "próba zarezerwowania %lld bajtów dla %s przy użyciu %s nie powiodła się: %s "
- "(%d)\n"
- 
+-#, c-format
+-msgid "attempt to reserve %lld bytes for %s using %s failed: %s (%d)\n"
+-msgstr ""
+-"próba zarezerwowania %lld bajtów dla %s przy użyciu %s nie powiodła się: %s "
+-"(%d)\n"
+-
 -#: .././restore/dirattr.c:320 .././restore/inomap.c:233
 -#: .././restore/inomap.c:398 .././restore/namreg.c:235 .././restore/tree.c:435
 -#: .././restore/tree.c:610
-+#: .././restore/dirattr.c:324 .././restore/inomap.c:239
-+#: .././restore/inomap.c:404 .././restore/namreg.c:239 .././restore/tree.c:444
++#: .././restore/dirattr.c:303 .././restore/inomap.c:239
++#: .././restore/inomap.c:404 .././restore/namreg.c:181 .././restore/tree.c:444
 +#: .././restore/tree.c:619
  #, c-format
  msgid "unable to map %s: %s\n"
@@ -4155,14 +4179,14 @@
  
 -#: .././restore/dirattr.c:407 .././restore/dirattr.c:799
 -#: .././restore/dirattr.c:1002 .././restore/dirattr.c:1079
-+#: .././restore/dirattr.c:411 .././restore/dirattr.c:803
-+#: .././restore/dirattr.c:1006 .././restore/dirattr.c:1083
++#: .././restore/dirattr.c:390 .././restore/dirattr.c:782
++#: .././restore/dirattr.c:985 .././restore/dirattr.c:1062
  #, c-format
  msgid "lseek of dirattr failed: %s\n"
  msgstr "lseek pliku dirattr nie powiodło się: %s\n"
  
 -#: .././restore/dirattr.c:491 .././restore/dirattr.c:642
-+#: .././restore/dirattr.c:495 .././restore/dirattr.c:646
++#: .././restore/dirattr.c:474 .././restore/dirattr.c:625
  #, c-format
  msgid "could not open/create directory extended attributes file %s: %s (%d)\n"
  msgstr ""
@@ -4171,8 +4195,8 @@
  
 -#: .././restore/dirattr.c:510 .././restore/dirattr.c:591
 -#: .././restore/dirattr.c:668
-+#: .././restore/dirattr.c:514 .././restore/dirattr.c:595
-+#: .././restore/dirattr.c:672
++#: .././restore/dirattr.c:493 .././restore/dirattr.c:574
++#: .././restore/dirattr.c:651
  #, c-format
  msgid "could not seek to into extended attributes file %s: %s (%d)\n"
  msgstr ""
@@ -4180,14 +4204,14 @@
  
 -#: .././restore/dirattr.c:528 .././restore/dirattr.c:686
 -#: .././restore/dirattr.c:703 .././restore/dirattr.c:722
-+#: .././restore/dirattr.c:532 .././restore/dirattr.c:690
-+#: .././restore/dirattr.c:707 .././restore/dirattr.c:726
++#: .././restore/dirattr.c:511 .././restore/dirattr.c:669
++#: .././restore/dirattr.c:686 .././restore/dirattr.c:705
  #, c-format
  msgid "could not read extended attributes file %s: %s (%d)\n"
  msgstr "nie udało się odczytać pliku rozszerzonych atrybutów %s: %s (%d)\n"
  
 -#: .././restore/dirattr.c:544
-+#: .././restore/dirattr.c:548
++#: .././restore/dirattr.c:527
  #, c-format
  msgid "could not seek to end of extended attributes file %s: %s (%d)\n"
  msgstr ""
@@ -4195,47 +4219,47 @@
  "(%d)\n"
  
 -#: .././restore/dirattr.c:559 .././restore/dirattr.c:606
-+#: .././restore/dirattr.c:563 .././restore/dirattr.c:610
++#: .././restore/dirattr.c:542 .././restore/dirattr.c:589
  #, c-format
  msgid "could not write extended attributes file %s: %s (%d)\n"
  msgstr "nie udało się zapisać pliku rozszerzonych atrybutów %s: %s (%d)\n"
  
 -#: .././restore/dirattr.c:571
-+#: .././restore/dirattr.c:575
++#: .././restore/dirattr.c:554
  #, c-format
  msgid "could not write at end of extended attributes file %s: %s (%d)\n"
  msgstr ""
  "nie udało się zapisać na końcu pliku rozszerzonych atrybutów %s: %s (%d)\n"
  
 -#: .././restore/dirattr.c:825
-+#: .././restore/dirattr.c:829
++#: .././restore/dirattr.c:808
  #, c-format
  msgid "update of dirattr failed: %s\n"
  msgstr "uaktualnienie dirattr nie powiodło się: %s\n"
  
 -#: .././restore/dirattr.c:933
-+#: .././restore/dirattr.c:937
++#: .././restore/dirattr.c:916
  #, c-format
  msgid "write of dirattr buffer failed: %s\n"
  msgstr "zapis bufora dirattr nie powiódł się: %s\n"
  
 -#: .././restore/dirattr.c:937
-+#: .././restore/dirattr.c:941
++#: .././restore/dirattr.c:920
  #, c-format
  msgid ""
  "write of dirattr buffer failed: expected to write %ld, actually wrote %ld\n"
-@@ -3551,59 +3548,59 @@
+@@ -3551,110 +3552,110 @@
  "zapis bufora dirattr nie powiódł się: oczekiwano zapisania %ld, zapisano "
  "%ld\n"
  
 -#: .././restore/dirattr.c:1015
-+#: .././restore/dirattr.c:1019
++#: .././restore/dirattr.c:998
  #, c-format
  msgid "read of dirattr failed: %s\n"
  msgstr "odczyt dirattr nie powiódł się: %s\n"
  
 -#: .././restore/dirattr.c:1092
-+#: .././restore/dirattr.c:1096
++#: .././restore/dirattr.c:1075
  #, c-format
  msgid "flush of dirattr failed: %s\n"
  msgstr "opróżnienie bufora dirattr nie powiodło się: %s\n"
@@ -4253,31 +4277,31 @@
  msgstr "nie można odwzorować nagłówka %s: %s\n"
  
 -#: .././restore/namreg.c:145
-+#: .././restore/namreg.c:149
++#: .././restore/namreg.c:153
  #, c-format
  msgid "could not find name registry file %s: %s\n"
  msgstr "nie udało się odnaleźć pliku rejestru nazw %s: %s\n"
  
 -#: .././restore/namreg.c:161
-+#: .././restore/namreg.c:165
++#: .././restore/namreg.c:164
  #, c-format
  msgid "could not create name registry file %s: %s\n"
  msgstr "nie udało się utworzyć pliku rejestru nazw %s: %s\n"
  
 -#: .././restore/namreg.c:274 .././restore/namreg.c:427
-+#: .././restore/namreg.c:278 .././restore/namreg.c:431
++#: .././restore/namreg.c:220 .././restore/namreg.c:373
  #, c-format
  msgid "lseek of namreg failed: %s\n"
  msgstr "lseek pliku namreg nie powiodło się: %s\n"
  
 -#: .././restore/namreg.c:347
-+#: .././restore/namreg.c:351
++#: .././restore/namreg.c:293
  #, c-format
  msgid "write of namreg buffer failed: %s\n"
  msgstr "zapis bufora namreg nie powiódł się: %s\n"
  
 -#: .././restore/namreg.c:351
-+#: .././restore/namreg.c:355
++#: .././restore/namreg.c:297
  #, c-format
  msgid ""
  "write of namreg buffer failed: expected to write %ld, actually wrote %ld\n"
@@ -4285,7 +4309,7 @@
  "zapis bufora namreg nie powiódł się: oczekiwano zapisania %ld, zapisano %ld\n"
  
 -#: .././restore/namreg.c:441
-+#: .././restore/namreg.c:445
++#: .././restore/namreg.c:387
  #, c-format
  msgid "read of namreg failed: %s (nread = %d)\n"
  msgstr "odczyt pliku namreg nie powiódł się: %s (nread = %d)\n"
@@ -4294,8 +4318,11 @@
 +#: .././restore/node.c:295
  #, c-format
  msgid ""
- "not enough virtual memory for node abstraction: remaining-vsmz=%llu need="
-@@ -3612,49 +3609,49 @@
+-"not enough virtual memory for node abstraction: remaining-vsmz=%llu need="
+-"%llu\n"
++"not enough virtual memory for node abstraction: remaining-vsmz=%llu "
++"need=%llu\n"
+ msgstr ""
  "za mało pamięci wirtualnej na abstrakcję węzłów: pozostałe vsmz=%llu "
  "potrzeba=%llu\n"
  
@@ -4354,7 +4381,7 @@
  msgid ""
  "using truncated inode generation numbers for compatibility with previously "
  "applied restore\n"
-@@ -3662,13 +3659,13 @@
+@@ -3662,13 +3663,13 @@
  "użycie skróconych liczb generacji i-węzłów dla kompatybilności z uprzednio "
  "odtworzonym zrzutem\n"
  
@@ -4370,7 +4397,7 @@
  #, c-format
  msgid ""
  "to restore this series of dumps, use the -%c option on the first restore\n"
-@@ -3676,250 +3673,241 @@
+@@ -3676,250 +3677,241 @@
  "aby odtworzyć tę serię zrzutów, należy użyć opcji -%c przy pierwszym "
  "odtwarzaniu\n"
  
