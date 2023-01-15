@@ -1,12 +1,12 @@
 Summary:	Tools for the XFS filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plikowego XFS
 Name:		xfsdump
-Version:	3.1.11
+Version:	3.1.12
 Release:	1
 License:	GPL v2
 Group:		Applications/Archiving
 Source0:	https://www.kernel.org/pub/linux/utils/fs/xfs/xfsdump/%{name}-%{version}.tar.xz
-# Source0-md5:	c36a3e34682248536655e5647362cb14
+# Source0-md5:	bbefb6b7f7167c8fc9bd9e45411815a1
 Patch0:		%{name}-miscfix.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		https://xfs.wiki.kernel.org/
